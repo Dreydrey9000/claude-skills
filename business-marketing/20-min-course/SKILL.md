@@ -1,6 +1,6 @@
 ---
 name: 20-min-course
-description: Build a 20-minute digital course product using Ryan Magin's proven system. One problem, one Loom video, ChatGPT for outline + sales page, SamCart checkout, ManyChat automation. From zero to selling in one afternoon. Use this skill when Drey or a client wants to create, plan, or launch a low-ticket digital product ($29-$49 range).
+description: Build a 20-minute digital course product using Ryan Magin's proven system. One problem, one Loom video, ChatGPT for outline + sales page, SamCart checkout, ManyChat automation. From zero to selling in one afternoon. Use this skill when the user or a client wants to create, plan, or launch a low-ticket digital product ($29-$49 range).
 ---
 
 # 20-Minute Course Builder
@@ -13,7 +13,7 @@ Ryan Magin's exact system for building a $29 digital course product in one after
 
 ## When To Use This Skill
 
-- Drey says "build a course" / "make a product" / "I want to sell something" / "low ticket"
+- the user says "build a course" / "make a product" / "I want to sell something" / "low ticket"
 - A client needs to create their first digital product
 - Someone has expertise but no product to sell
 - Anyone asking how to monetize their audience with a simple offer

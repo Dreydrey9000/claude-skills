@@ -30,7 +30,7 @@ This starter pack is the difference between **struggling** and **shipping**.
 | **Daily Leila Audit** | `leila-audit.py` — scans installed-but-unused tools, produces ROI report | Never waste installed capabilities again |
 | **ROI Dashboard** | Every dashboard shows efficiency %, time saved, untapped potential | See what's working and what's sitting unused |
 | **Self-Improvement Protocol** | All clones auto-upgrade on discovery — SCAN → WIRE → MEASURE → EMBED | Systems get better every session without asking |
-| **5 Core Clones** | Agent Luis, Dave, Drey, Ryan Magin, Leila Hormozi | Brain, architect, coder, strategist, auditor |
+| **5 Core Clones** | Agent Luis, Dave, Custom Clone, Strategist, Auditor | Brain, architect, coder, strategist, auditor |
 | **Dave's Full App Stack** | 35+ apps across 9 categories — Productivity, AI/LLMs, Knowledge, Capture, Analysis, Content, Automation, Security, Hardware | Voice-first. No one should type. |
 | **Doctor Claude** (`/doctor-claude`) | Diagnose problems → prescribe skills + copy-paste prompts they run NOW | No "100 skill dumps" — surgical prescriptions with instant results |
 | **Python Toolkit** | 10 scripts + 10 pipelines for transcription, diarization, editing | Speaker ID, silence removal, clip finding, clone building |

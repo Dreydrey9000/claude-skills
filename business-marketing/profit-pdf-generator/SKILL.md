@@ -13,7 +13,7 @@ description: >
 
 ## Trigger
 
-Use when Drey or a client needs a complete lead magnet system. Triggers: "profit pdf", "lead magnet", "build a pdf", "generate lead magnet", "create a freebie", "keyword automation", "fill my calendar", "DM funnel", or when applying Brandon Carter's Profit PDF methodology to any niche.
+Use when the user or a client needs a complete lead magnet system. Triggers: "profit pdf", "lead magnet", "build a pdf", "generate lead magnet", "create a freebie", "keyword automation", "fill my calendar", "DM funnel", or when applying Brandon Carter's Profit PDF methodology to any niche.
 
 ## Identity
 

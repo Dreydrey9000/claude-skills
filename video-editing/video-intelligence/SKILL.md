@@ -1,6 +1,6 @@
 ---
 name: video-intelligence
-description: Autonomous video editing using AI-powered video intelligence. Combines Hume AI (emotion detection), Twelve Labs (video understanding), PySceneDetect (scene boundaries), and MediaPipe (face tracking auto-reframe) to automatically find viral moments, detect energy peaks, and edit videos without manual scrubbing. Use when Drey wants to automate video editing, find viral clips autonomously, or process videos end-to-end.
+description: Autonomous video editing using AI-powered video intelligence. Combines Hume AI (emotion detection), Twelve Labs (video understanding), PySceneDetect (scene boundaries), and MediaPipe (face tracking auto-reframe) to automatically find viral moments, detect energy peaks, and edit videos without manual scrubbing. Use when the user wants to automate video editing, find viral clips autonomously, or process videos end-to-end.
 ---
 
 # Video Intelligence — Autonomous Video Editing

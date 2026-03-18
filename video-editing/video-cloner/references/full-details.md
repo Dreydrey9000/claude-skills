@@ -9,10 +9,10 @@
 
 ## When to Use
 
-- Drey says: "clone this video", "match this style", "make mine look like this"
-- Drey drops an Instagram/TikTok/YouTube URL as a reference
-- Drey says: "edit this video like [creator name]"
-- Drey says: "subtitle this like [reference]", "add overlays like [reference]"
+- the user says: "clone this video", "match this style", "make mine look like this"
+- the user drops an Instagram/TikTok/YouTube URL as a reference
+- the user says: "edit this video like [creator name]"
+- the user says: "subtitle this like [reference]", "add overlays like [reference]"
 - Any time a reference video is provided for style matching
 
 ---
@@ -39,7 +39,7 @@
 - Colors are extracted as exact hex codes from the frames
 
 ### 4. ALWAYS SHOW YOUR WORK
-- Save extracted frames to Desktop or scratchpad so Drey can see them
+- Save extracted frames to Desktop or scratchpad so the user can see them
 - Annotate frames with arrows/labels showing what you detected
 - Before applying a style, show a side-by-side: reference frame vs. your recreation
 - Never describe a style change without showing it visually

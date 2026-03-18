@@ -13,7 +13,7 @@
 **Data Source ID:** `a2587e67-579b-4dcb-9031-35b0546423e1`
 
 > **STATUS:** Database LIVE in Notion. Created by Notion AI. First entry (Lulu Cheng Meservey) exists.
-> **LOCATION:** Under "Source Databases & System Pages" in Brain Hub (Drey moved manually).
+> **LOCATION:** Under "Source Databases & System Pages" in Brain Hub (user moved manually).
 > **First Entry:** Page ID `223e6ea1-6ef8-474a-943d-3710e8df1560`
 
 **Properties (LIVE SCHEMA):**
@@ -61,10 +61,10 @@ For EACH of these three, write specific, actionable applications:
 - Which frameworks apply to his personal brand, real estate content, authority positioning
 - Specific use cases for his filming, speaking, offer creation
 
-**Drey:**
-- Which frameworks validate or sharpen Drey's existing methodology
+**User:**
+- Which frameworks validate or sharpen the user's existing methodology
 - Personal brand applications
-- How this connects to Drey's content strategy
+- How this connects to the user's content strategy
 
 **Viral Editz:**
 - Client positioning applications
@@ -88,10 +88,10 @@ For EVERY actionable recommendation in the video, classify:
 - **PRINCIPLE (Timeless):** Human psychology, persuasion, storytelling, communication patterns, decision-making frameworks. These don't expire. Mark as "Timeless."
 - **TACTIC (Time-Bound):** Specific platform features, software tools, growth hacks, algorithm strategies, pricing models, website references. These expire. Mark as "Check Current."
 
-**5c. Automation Filter (Drey's Actual Stack)**
-For every MANUAL tactic mentioned, ask: "Is there an AI/automation tool that does this now?" Then give the EXACT tool, EXACT setup, and how the clone executes it. No vague suggestions -- specific tools Drey owns or can access.
+**5c. Automation Filter (the user's Actual Stack)**
+For every MANUAL tactic mentioned, ask: "Is there an AI/automation tool that does this now?" Then give the EXACT tool, EXACT setup, and how the clone executes it. No vague suggestions -- specific tools the user owns or can access.
 
-**Drey's Live Stack (clone can use all of these):**
+**the user's Live Stack (clone can use all of these):**
 - Claude Code + MCP (Notion API, Google Drive API) -- agentic execution
 - Notion (full second brain, all databases, API access)
 - Google Drive (file storage, content delivery)
@@ -109,7 +109,7 @@ For every MANUAL tactic mentioned, ask: "Is there an AI/automation tool that doe
 
 **Automation Upgrade Map (use YOUR tools, not generic suggestions):**
 
-| Old Manual Tactic | Modern Version (Drey's Stack) | Clone Executes How |
+| Old Manual Tactic | Modern Version (the user's Stack) | Clone Executes How |
 |-------------------|------------------------------|-------------------|
 | "DM people individually" | ManyChat flows on Instagram | Set up keyword triggers + auto-response sequences |
 | "Write email sequences" | Claude Code generates copy > Make.com sends via ConvertKit | Notion content idea > Claude writes > auto-sends |
@@ -150,13 +150,13 @@ TACTICS TO VERIFY (may be outdated):
 - [Tactic]: [What speaker said] > [Current status] > [Modern alternative if outdated]
 
 AUTOMATION UPGRADES (with exact execution):
-- [Manual tactic] > NOW USE: [Exact tool from Drey's stack] > HOW: [Specific steps the clone takes]
+- [Manual tactic] > NOW USE: [Exact tool from the user's stack] > HOW: [Specific steps the clone takes]
 ```
 
 **Why this matters for the clone:**
 - The clone needs to know WHEN advice was given to weight it correctly
 - Principles from 2018 are as valid as 2026. Tactics from 2018 may be harmful
-- The automation filter ensures the clone always executes the MODERN way using Drey's actual tools
+- The automation filter ensures the clone always executes the MODERN way using the user's actual tools
 - Every extraction makes the clone smarter about what's current vs what's legacy
 - The clone never recommends manual work when automation exists in the stack
 - This makes the entire knowledge base self-correcting over time
@@ -241,7 +241,7 @@ Append this block to the page content of every framework created:
 FRESHNESS PROTOCOL
 - Source Release Date: [Video upload date]
 - Classification: [Timeless Principle / Time-Bound Tactic / Hybrid]
-- Automation Check: [Can this be automated with Drey's stack? If yes, how]
+- Automation Check: [Can this be automated with the user's stack? If yes, how]
 - Platform Dependency: [None / Platform-specific — name the platform]
 ```
 
@@ -266,18 +266,18 @@ For Tier 2, append a section to the speaker's Council page:
 - Every framework mentioned is captured SOMEWHERE
 
 
-### Route 5: Content & Ideas (MANDATORY - Content Fuel for Ryan + Drey)
+### Route 5: Content & Ideas (MANDATORY - Content Fuel for Ryan + the user)
 
 **Database ID:** `6743487a-7863-473f-878c-fbad86ae18ef`
 **Data Source ID:** `f0dbb615-5dd0-402a-8ecb-fb5240828c17`
 
-Every YouTube extraction MUST generate content ideas for Ryan Magin and Drey. This is what makes the pipeline compound - every video watched becomes content to film.
+Every YouTube extraction MUST generate content ideas for Ryan Magin and the user. This is what makes the pipeline compound - every video watched becomes content to film.
 
-**Generate 3-5 content ideas per person (Ryan + Drey separately).**
+**Generate 3-5 content ideas per person (Ryan + the user separately).**
 
 For each idea, create an entry with:
 - Content Title (title): The video topic/hook
-- Creator (multi_select): ["Ryan"] or ["Drey"] depending on who it's for
+- Creator (multi_select): ["Ryan"] or ["User"] depending on who it's for
 - Type (select): "Video Idea"
 - Hook/Angle (rich_text): The opening hook for the video
 - Hook (rich_text): Exact verbatim hook to open with
@@ -297,7 +297,7 @@ For each idea, create an entry with:
 - Change Log (rich_text): "[DATE]: Generated from YouTube Pipeline. Source: [Video Title] by [Speaker]."
 
 **Content Idea Generation Rules:**
-1. Each idea must be SPECIFIC to the person (Ryan = real estate, authority, family brand; Drey = content strategy, AI, editing, personal brand)
+1. Each idea must be SPECIFIC to the person (Ryan = real estate, authority, family brand; User = content strategy, AI, editing, personal brand)
 2. Reference the specific framework or quote that inspired the idea
 3. Include a hook that could open the video
 4. Tag the Virality Score honestly - only "High" if it's genuinely controversial, emotional, or novel
@@ -311,10 +311,10 @@ For each idea, create an entry with:
 - Bucket: Self-Improvement
 - Virality Score: High
 
-**Example for Drey from same video:**
+**Example for the user from same video:**
 - Title: "The PR expert who saved Activision taught me how cults actually work"
 - Hook: "Cult leaders don't have better ideas. They just communicate differently. Here's what the #1 PR expert in America told me about how to make people believe anything."
-- Creator: Drey
+- Creator: User
 - Bucket: Controversial Take
 - Virality Score: High
 
@@ -347,12 +347,12 @@ Every YouTube extraction MUST generate an actionable system prompt that roleplay
 - Quick reference of what the bot does
 - Link to source video
 
-**ALSO create a Content & Ideas entry** for Drey called "[Speaker] Asks YOU Bot — [Topic]" following the same 5-Format Content Package pattern used for Tony Asks YOU Bot:
+**ALSO create a Content & Ideas entry** for the user called "[Speaker] Asks YOU Bot — [Topic]" following the same 5-Format Content Package pattern used for Tony Asks YOU Bot:
 - This IS the "Prompt Everything" content series
-- Every video Drey watches generates a shareable prompt
+- Every video the user watches generates a shareable prompt
 - Content hook: "I watched X → turned it into a prompt → you can use it"
 - Include hooks that reference the specific video and speaker
-- Position Drey as "The Operationalizer" who turns consumption into tools
+- Position the user as "The Operationalizer" who turns consumption into tools
 
 **Content Idea Rules for Video-Sourced Ideas:**
 1. DIRECTLY reference the specific video ("Lulu said X at timestamp Y")
@@ -532,14 +532,14 @@ Title properties differ per database — always use the correct one:
 3. Fetch additional context (episode pages, guest profiles)
 4. Extract ALL frameworks
 5. Pull quotable lines
-6. Write applications (Ryan Magin, Drey, Viral Editz)
-7. Generate content ideas (3-5 per person: Ryan + Drey)
+6. Write applications (Ryan Magin, User, Viral Editz)
+7. Generate content ideas (3-5 per person: Ryan + the user)
 8. DEDUP CHECK on Council for speaker
 9. Create YouTube Library entry (with full page content)
 10. Create/update Council entry
 11. Create Master Framework entries (one per framework)
 12. Create Quotes Library entries (best 3-5)
-13. Create Content & Ideas entries (Ryan ideas + Drey ideas)
+13. Create Content & Ideas entries (Ryan ideas + User ideas)
 14. Link Content Ideas → Council member + Framework relations
 15. Update Change Log on all entries
 
@@ -550,7 +550,7 @@ Title properties differ per database — always use the correct one:
 
 Before completing:
 - [ ] ALL frameworks extracted (not just 2-3)
-- [ ] Applications cover Ryan + Drey + Viral Editz specifically
+- [ ] Applications cover Ryan + the user + Viral Editz specifically
 - [ ] Council DEDUP check performed before create
 - [ ] Quotable lines captured
 - [ ] Chapter breakdown included (if available)
@@ -558,7 +558,7 @@ Before completing:
 - [ ] Source URL preserved on all entries
 - [ ] Skills Tags accurately reflect content
 - [ ] Content ideas generated for Ryan (3-5 ideas)
-- [ ] Content ideas generated for Drey (3-5 ideas)
+- [ ] Content ideas generated for the user (3-5 ideas)
 - [ ] Each content idea has a specific hook (not generic)
 - [ ] Content ideas linked to Council member + Frameworks via relations
 - [ ] Virality scores are honest (not everything is "High")
@@ -585,8 +585,8 @@ routes = {
 - Route 2: 1 Council entry (created or updated)
 - Route 3: ALL frameworks mentioned in video (not just 2-3)
 - Route 4: 3-5 quotes minimum
-- Route 5: 3-5 ideas per person (Ryan + Drey) = 6-10 total
-- Route 6: 1 "[Speaker] Asks YOU" prompt + 1 content idea for Drey about it
+- Route 5: 3-5 ideas per person (Ryan + the user) = 6-10 total
+- Route 6: 1 "[Speaker] Asks YOU" prompt + 1 content idea for the user about it
 
 If ANY route has 0 entries → STOP. Fix it before proceeding.
 
@@ -599,7 +599,7 @@ For each entry found in Pass 1, verify content quality:
 - [ ] Status = "Extracted" or higher
 - [ ] Extraction Status multi_select has ALL 6 routes tagged
 - [ ] Council Link relation populated
-- [ ] Page content includes: metadata, applications (Ryan/Drey/VE), takeaways, chapters
+- [ ] Page content includes: metadata, applications (Ryan/User/VE), takeaways, chapters
 
 **Route 2 (Council):**
 - [ ] "Why in Council" section exists
@@ -620,7 +620,7 @@ For each entry found in Pass 1, verify content quality:
 - [ ] Quotes are actually quotable (stand alone as tweets/hooks)
 
 **Route 5 (Content Ideas):**
-- [ ] Minimum 3 for Ryan, minimum 3 for Drey
+- [ ] Minimum 3 for Ryan, minimum 3 for the user
 - [ ] Each has: Hook (specific, not generic), Big Idea, Core Message, Script outline
 - [ ] Each references the specific video/speaker (not generic advice)
 - [ ] Council relation linked to speaker
@@ -630,7 +630,7 @@ For each entry found in Pass 1, verify content quality:
 **Route 6 (Asks YOU Bot):**
 - [ ] System prompt is complete (4-6 phases, uses speaker's actual language)
 - [ ] Prompt references actual quotes from the video
-- [ ] Content idea for Drey exists (the "Prompt Everything" series entry)
+- [ ] Content idea for the user exists (the "Prompt Everything" series entry)
 - [ ] Source Video URL linked
 
 If ANY checkbox fails → STOP. Fix it before proceeding.
@@ -667,7 +667,7 @@ Route 6: [OK/FAIL]          Route 6: [OK/FAIL]
 VERDICT: [ALL CLEAR / X ISSUES FOUND]
 ```
 
-Only report "DONE - Fully Routed" to Drey when ALL three passes show OK across all routes.
+Only report "DONE - Fully Routed" to the user when ALL three passes show OK across all routes.
 
 ---
 

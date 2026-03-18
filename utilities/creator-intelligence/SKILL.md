@@ -10,8 +10,8 @@ description: >
   "viral database", new client onboarding, "compare to", "find similar creators", "what's working for",
   "content strategy for @handle", "analyze their content", "creator breakdown",
   "scrape their IG", "scrape @handle", any Instagram handle or URL.
-  DEFAULT RULE: This is the DEFAULT skill for ALL Instagram scraping. If Drey drops an IG handle
-  or URL, this fires FIRST. Only route to ig-profile-scraper if Drey explicitly asks for
+  DEFAULT RULE: This is the DEFAULT skill for ALL Instagram scraping. If the user drops an IG handle
+  or URL, this fires FIRST. Only route to ig-profile-scraper if the user explicitly asks for
   personal/dating intel ("who is this girl", "tell me about her", "stalker mode").
   If ambiguous, ASK: "Personal intel or creator analysis?"
   LINKED TO: ig-profile-scraper (personal/dating sub-tool — uses Playwright for lightweight scrapes)
@@ -195,4 +195,4 @@ Complete details, decision trees, protocols, and implementation specs: [referenc
 ## Change Log
 - [2026-03-13]: Context Diet — split 430 lines into routing card (190 lines) + references/full-details.md (268 lines). Zero content deleted. By skill-diet.py.
 
-- 2026-02-06: Created. Source: Luis Carrillo brain dump session. Designed as the master extraction pipeline for both creators Drey follows and Viral Editz clients. Integrates with Content Market Fit, AI Cookbook, Video Intelligence, and all content creation skills. Notion databases designed (Creator Intelligence, Video Deconstruction, Hook Swipe File).
+- 2026-02-06: Created. Source: Luis Carrillo brain dump session. Designed as the master extraction pipeline for both creators the user follows and Viral Editz clients. Integrates with Content Market Fit, AI Cookbook, Video Intelligence, and all content creation skills. Notion databases designed (Creator Intelligence, Video Deconstruction, Hook Swipe File).

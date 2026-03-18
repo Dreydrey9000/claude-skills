@@ -33,4 +33,4 @@ The difference between someone who "uses Claude Code" and someone who SHIPS with
 
 ---
 
-*Built by Luis & Drey | Frictionless Life*
+*Built with Claude Code | Frictionless Life*

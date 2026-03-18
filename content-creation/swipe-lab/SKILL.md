@@ -207,7 +207,7 @@ All carousel copy MUST sound like the user — not generic motivational content.
 Swipe Lab supports multiple brand profiles. Each is a separate JSON in `brands/`.
 
 - `brands/kclavier.json` — Kevin's brand
-- `brands/itisdrey.json` — Drey's brand
+- `brands/itisdrey.json` — the user's brand
 - `brands/someclient.json` — A client's brand
 
 When generating, Claude checks:

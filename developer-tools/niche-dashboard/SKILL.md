@@ -12,7 +12,7 @@ Build a real-time intelligence dashboard for ANY industry or profession. One cod
 
 **Stolen from:** World Monitor (worldmonitor.app) — 170+ feeds, dual map engine, AI briefs, 4 variants from one codebase. We extracted the 5 core patterns and simplified them for niche builds.
 
-**Reference architecture:** `/Users/andrethomas/Desktop/AI Skills : Agents : Repos Etc/07-AGENT-PROJECTS/worldmonitor-main/`
+**Reference architecture:** `./reference-architecture/ (see World Monitor repo)`
 
 ---
 
@@ -112,7 +112,7 @@ Ask the user:
 
 ### 3. Deployment?
 - **Vercel** (recommended) — free tier handles RSS proxy + static frontend. Zero config.
-- **Cloudflare Workers** — if already on Cloudflare (Drey's setup).
+- **Cloudflare Workers** — if already on Cloudflare (the user's setup).
 - **Self-hosted** — Docker on any VPS.
 
 ---
@@ -183,4 +183,4 @@ Complete details, decision trees, protocols, and implementation specs: [referenc
 
 ## Change Log
 - [2026-03-13]: Context Diet — split 342 lines into routing card (186 lines) + references/full-details.md (174 lines). Zero content deleted. By skill-diet.py.
-- [2026-03-06]: Created. 5 patterns extracted from World Monitor. Interactive decision points defined. Simplified stack chosen. By Drey + Claude.
+- [2026-03-06]: Created. 5 patterns extracted from World Monitor. Interactive decision points defined. Simplified stack chosen. By the user + Claude.

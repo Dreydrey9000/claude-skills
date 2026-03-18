@@ -288,7 +288,7 @@ When screenshot provided, add:
 2. Polisher adds visuals following this skill's guidance (V + E)
 3. Polisher adds subtitles using CapCut, Premiere Pro, or Submagic (S)
 4. Polisher spell-checks and ensures clarity
-5. Final video goes to Drey for approval (review only, no re-editing)
+5. Final video goes to the user for approval (review only, no re-editing)
 
 **What Polisher Does NOT Do:**
 - ❌ Restructure video (clipper did that)
@@ -330,12 +330,12 @@ A well-polished video following this skill should achieve:
 - Uses custom client B-roll (not stock)
 - Hook is visually exciting + audio clear + text pops
 - Zero spelling errors in subtitles
-- Drey approval on first submission
+- user approval on first submission
 
 **Training Targets (example milestones — adjust per current team):**
 - New polishers: 5 client videos/day target
 - Experienced polishers: 1 complex client video/day
-- All polishers: Independent (Drey editing hours = 0)
+- All polishers: Independent (user editing hours = 0)
 
 ---
 

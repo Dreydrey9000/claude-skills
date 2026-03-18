@@ -15,8 +15,8 @@ description: >
   "who is this girl", "who is this person", "tell me about her", "tell me about him",
   any Instagram URL (instagram.com/...), any @handle for personal intelligence gathering.
   ROUTING RULE: creator-intelligence is ALWAYS the default for any IG scraping request.
-  This skill (ig-profile-scraper) only fires when Drey EXPLICITLY asks for personal/dating intel
-  (e.g. "who is this girl", "tell me about her", "stalker mode"). If ambiguous, ASK Drey:
+  This skill (ig-profile-scraper) only fires when the user EXPLICITLY asks for personal/dating intel
+  (e.g. "who is this girl", "tell me about her", "stalker mode"). If ambiguous, ASK the user:
   "Personal intel or creator/business analysis?" before choosing. Never auto-fire this over
   creator-intelligence. This is the rare-use personal tool, not the default.
   LINKED TO: creator-intelligence (the default IG analysis pipeline)
@@ -98,4 +98,4 @@ npx playwright open --user-data-dir ~/Library/Caches/ms-playwright/mcp-chrome-pr
 | + transcribe | +1-2 min per reel |
 
 ## Change Log
-- 2026-03-14: Created. Simplified from 3-mode bloat to single-mode "scrape everything" after Steve Jobs review. By Claude Code for Drey.
+- 2026-03-14: Created. Simplified from 3-mode bloat to single-mode "scrape everything" after Steve Jobs review. By Claude Code.

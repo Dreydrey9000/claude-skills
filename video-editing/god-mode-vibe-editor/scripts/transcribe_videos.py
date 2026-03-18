@@ -4,7 +4,7 @@
 Viral Editz Edition with NRVES Framework Integration
 
 Downloads YouTube videos, transcribes with Whisper, and extracts viral patterns
-using Drey's NRVES framework (Navigate, Restructure, Visualize, Enhance, Submit).
+using the NRVES framework (Navigate, Restructure, Visualize, Enhance, Submit).
 
 Installation:
   mkdir -p ~/.claude/commands
@@ -36,7 +36,7 @@ WHISPER_MODEL = os.environ.get("WHISPER_MODEL", "medium")
 MAX_VIDEOS = 50  # Safety limit
 
 # ═══════════════════════════════════════════════════════════════════════════════
-# NRVES FRAMEWORK (Drey's Viral Editz System)
+# NRVES FRAMEWORK (Viral Editz System)
 # ═══════════════════════════════════════════════════════════════════════════════
 
 NRVES_FRAMEWORK = """

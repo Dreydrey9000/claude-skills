@@ -1,12 +1,12 @@
 # Viral Editz Brain Intelligence — Battle Plan v2.0
 
-## The Vision (In Drey's Words)
+## The Vision (In the user's Words)
 
 "We're playing god at this level. Viral god. Because we can with data just know 100% with certainty this is going to work. We have the playbook. We have the examples. We have the source. We have even recommendations on tonality."
 
 "Claude is modern-day Jarvis from Iron Man. You just show up, you have your documents, your info with bullet points and titles and what you need to do. It's an unfair advantage."
 
-**In One Line:** Track what's working across every client, every platform, every week — then feed those winning patterns into content generation for Drey, Ryan, Claudia, their clones, and every future client. Data in. Viral content out. Rinse. Repeat. Dominate.
+**In One Line:** Track what's working across every client, every platform, every week — then feed those winning patterns into content generation for the user, Ryan, Claudia, their clones, and every future client. Data in. Viral content out. Rinse. Repeat. Dominate.
 
 ---
 
@@ -234,7 +234,7 @@ This data feeds directly into script generation. When we write a hook, we're not
 
 - **Client scrapes** — Our own clients' data aggregated by industry
 - **Competitor scrapes** — 2-5 competitors per client tracked
-- **Creator Intelligence** — Creators Drey follows, deconstructed
+- **Creator Intelligence** — Creators the user follows, deconstructed
 - **Perplexity / Grok / Reddit** — Real-time industry pulse
 - **Platform trend APIs** — TikTok trending, YouTube trending, IG explore
 
@@ -342,7 +342,7 @@ Video Deconstruction DB ────→ Extract hook ──→ Hook Library entr
                                                     ↓
 Competitor Scrapes ─────────→ Extract hook ──→ Hook Library entry
                                                     ↓
-Manual entry (Drey/Ryan) ──→ Direct add ────→ Hook Library entry
+Manual entry (User/Ryan) ──→ Direct add ────→ Hook Library entry
 
 Every hook gets:
 1. Exact text preserved
@@ -363,7 +363,7 @@ Every hook gets:
 |------|----------------|
 | **Ryan Magin (real)** | "What should I film this week?" → Top wins across all clients |
 | **Ryan Magin (clone)** | Auto-generate scripts modeled after wins, in Ryan's voice |
-| **Drey (real)** | "What should I film this week?" → Wins matched to his CMF |
+| **User (real)** | "What should I film this week?" → Wins matched to his CMF |
 | **Luis Carrillo (clone)** | Auto-generate scripts in Luis's voice |
 | **Claudia (clone)** | Auto-generate podcast scripts modeled after wins |
 | **Viral Editz team** | Know what's working, double down for each client |
@@ -383,13 +383,13 @@ WEEKLY WINS (raw data from 100K+ posts)
     │   Template: "I [achieved result] in [timeframe] with [simple method]"
     │
     ├── STEP 3: Run through Content Market Fit filter
-    │   For Drey: How does this hook serve Drey's offer/worldview/audience?
+    │   For the user: How does this hook serve the user's offer/worldview/audience?
     │   For Ryan: How does this hook serve Ryan's offer/worldview/audience?
     │   For Claudia: How does this hook serve Claudia's 5 Keys?
     │   For Client: How does this hook serve their CMF triangle?
     │
     ├── STEP 4: Generate scripts (per persona)
-    │   Drey version (real Drey voice, his topics, his audience)
+    │   User version (real user voice, his topics, his audience)
     │   Ryan version (Ryan's energy, his topics, his audience)
     │   Claudia version (her 5 Keys, her AI angle, her audience)
     │   Client version (their niche, their voice, their audience)
@@ -422,7 +422,7 @@ Per client, calculate:
 
 ### The "What Do I Film Today?" Command
 
-This is the killer feature. Any creator (Drey, Ryan, or client) opens Claude and asks:
+This is the killer feature. Any creator (User, Ryan, or client) opens Claude and asks:
 
 **"What do I film today?"**
 
@@ -512,7 +512,7 @@ Track the full lifecycle from script to performance:
 |----------|------|---------|
 | Title | Title | Script title / topic |
 | Script Text | Rich text | Full script with hook, talking points, CTA |
-| For Whom | Select | Drey / Ryan / Claudia / [Client Name] |
+| For Whom | Select | User / Ryan / Claudia / [Client Name] |
 | Clone or Real | Select | Clone (AI-generated) / Real (human films) |
 | Hook | Relation | → Hook Library |
 | Psychology Key | Select | MIRROR / TRIGGER / PATTERN / LEVERAGE / TRUST |
@@ -533,7 +533,7 @@ Track the full lifecycle from script to performance:
 
 | Persona | Content Source | Voice/Style | Volume |
 |---------|--------------|-------------|--------|
-| Real Drey | Weekly Wins + CMF + Industry Intel | Drey's voice, his worldview, his audience | 5-7 videos/week |
+| Real User | Weekly Wins + CMF + Industry Intel | the user's voice, their worldview, his audience | 5-7 videos/week |
 | Luis Clone | Same + auto-filtered by CMF | Luis's voice (AI-generated scripts) | 3-5 additional/week |
 | Real Ryan | Weekly Wins + CMF + Industry Intel | Ryan's energy, Speed to Post | 5-7 videos/week |
 | Ryan Clone | Same + auto-filtered by CMF | Ryan's voice (AI-generated scripts) | 3-5 additional/week |
@@ -559,7 +559,7 @@ Pre-session briefing (auto-generated):
 
 **What this means for consulting:**
 
-When Ryan or Drey sits down with a consulting client, they're not giving generic advice. They're saying:
+When the user sits down with a consulting client, they're not giving generic advice. They're saying:
 
 "In your niche, the top performing format right now is podcast clips. The hooks that work use accusation frameworks. Your competitor posted 3x more than you last month and grew 2x faster. Here are the exact 7 videos you need to film this week, with hooks proven to work by our data across 15+ accounts in your space. Here's the script. Here's the energy. Film it."
 
@@ -913,7 +913,7 @@ Viral Editz Master Sheet
 - [ ] Ryan Magin DB migration + expand to TikTok/YT
 - [ ] Epic Dental full scrape (all platforms)
 - [ ] The Baileys full scrape (all platforms)
-- [ ] Run Content Market Fit interview on Drey (AI podcast style)
+- [ ] Run Content Market Fit interview on User (AI podcast style)
 - [ ] Collect Ryan Magin reference photos for Soul ID
 
 ### Phase 2: Weekly Wins + Hook Library (Build Now)
@@ -934,7 +934,7 @@ Viral Editz Master Sheet
 - [ ] Build weekly industry brief template
 - [ ] Build "What Do I Film Today?" command (Daily Fire Brief)
 - [ ] Build Filming Package weekly output
-- [ ] Clone content pipeline: wins → scripts for Ryan/Drey/Claudia
+- [ ] Clone content pipeline: wins → scripts for Ryan/User/Claudia
 - [ ] Audience research automation (Reddit API + Perplexity + Grok)
 - [ ] First industry intelligence report generated
 
@@ -972,7 +972,7 @@ Viral Editz Master Sheet
 ## The SOP (Standard Operating Procedure)
 
 ### Daily (Phase 6 goal)
-- "What do I film today?" available for Drey, Ryan, any client
+- "What do I film today?" available for the user, Ryan, any client
 - Content Scripts status updates (Filmed → Posted)
 - Performance tracking on posted content
 
@@ -982,7 +982,7 @@ Viral Editz Master Sheet
 3. **Monday AM:** Extract hooks → Hook Library
 4. **Monday AM:** Generate industry briefs per niche
 5. **Monday AM:** Update Client Performance rollups
-6. **Monday PM:** Clone content pipeline → 10+ scripts for Ryan/Drey/Claudia
+6. **Monday PM:** Clone content pipeline → 10+ scripts for Ryan/User/Claudia
 7. **Monday PM:** Generate Weekly Filming Packages for active clients
 8. **Friday:** Review weekly performance, flag any declining clients, update pivotal moments
 

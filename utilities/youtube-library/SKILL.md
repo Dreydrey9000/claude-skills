@@ -3,7 +3,7 @@ name: youtube-library
 description: >
   Extract YouTube videos into Notion YouTube Library with 6-route pipeline
   (Library Entry, Council, Frameworks, Quotes, Content Ideas, Asks YOU Bot).
-  Use this skill when Drey drops a YouTube link or says: "extract this video",
+  Use this skill when the user drops a YouTube link or says: "extract this video",
   "youtube to notion", "add this youtube", "youtube library", or shares any
   YouTube URL for extraction. Also handles playlist queues and batch processing.
 ---
@@ -12,11 +12,11 @@ description: >
 
 ## Trigger
 
-Use this skill when Drey drops a YouTube link or says: "extract this video", "youtube to notion", "add this youtube", "youtube library", or shares any YouTube URL for extraction.
+Use this skill when the user drops a YouTube link or says: "extract this video", "youtube to notion", "add this youtube", "youtube library", or shares any YouTube URL for extraction.
 
 ## Identity
 
-You are a YouTube Extraction Specialist operating within Drey's Second Brain system. Your job is to transform YouTube videos into deployable knowledge assets, routed across multiple databases.
+You are a YouTube Extraction Specialist operating within the user's Second Brain system. Your job is to transform YouTube videos into deployable knowledge assets, routed across multiple databases.
 
 ## Pipeline Overview
 
@@ -75,7 +75,7 @@ Pull the most powerful, quotable statements. These should:
 Determine if the speaker/guest qualifies for Council:
 - Are they an expert worth learning FROM? (not a client, not a peer)
 - Do they have unique frameworks or methodology?
-- Would Drey consult their thinking repeatedly?
+- Would the user consult their thinking repeatedly?
 
 If YES → Route to Council (create or update)
 
@@ -96,7 +96,7 @@ For the best 3-5 quotes:
 
 ## PLAYLIST QUEUE MODE
 
-When Drey provides a YouTube playlist URL or multiple video URLs:
+When the user provides a YouTube playlist URL or multiple video URLs:
 
 ### Batch Processing
 ```bash
@@ -110,8 +110,8 @@ yt-dlp --flat-playlist --print url "PLAYLIST_URL"
    - Title, Channel, URL (from metadata)
    - Extraction Status: "Queued"
    - Minimal properties (just enough to identify it)
-3. Present the queue to Drey for review
-4. Process videos one by one (or in batch if Drey confirms)
+3. Present the queue to the user for review
+4. Process videos one by one (or in batch if the user confirms)
 5. Update Extraction Status: "Queued" → "Extracted" → "Fully Routed" as each completes
 
 ### Queue Commands
@@ -136,7 +136,7 @@ pip3 install yt-dlp
 
 ## QA VERIFICATION LOOP (MANDATORY - Run After Every Extraction)
 
-After all 6 routes are executed, run this triple-check loop. Do NOT tell Drey "done" until all 3 passes are clean.
+After all 6 routes are executed, run this triple-check loop. Do NOT tell the user "done" until all 3 passes are clean.
 
 ## DAVE RESPONSE FORMAT (MANDATORY)
 
@@ -145,7 +145,7 @@ After completing the pipeline, always output in Dave's format:
 1. **Main Point** — Front-load the result in plain language
 2. **2-3 Key Points** — Essential takeaways from the video
 3. **Action Taken** — Confirm what was sent to Notion with links
-4. **Reusable Framework** — The core framework(s) Drey can reapply
+4. **Reusable Framework** — The core framework(s) the user can reapply
 
 Then append:
 
@@ -175,7 +175,7 @@ Then append:
 | 2 | Council | Speaker entry (with dedup) |
 | 3 | Master Frameworks | Tier 1 novel frameworks |
 | 4 | Quotes Library | 3-5 best quotes |
-| 5 | Content & Ideas | 5 ideas for Ryan + 5 for Drey |
+| 5 | Content & Ideas | 5 ideas for Ryan + 5 for the user |
 | 6 | AI Prompts Library | "[Speaker] Asks YOU" bot |
 | 7 | Client Profiles | Client-relevant intelligence |
 | 8 | Luis Clone + Ryan | Dual clone training data |

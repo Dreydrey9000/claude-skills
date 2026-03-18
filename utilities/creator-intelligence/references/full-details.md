@@ -11,7 +11,7 @@
 
 | Database | Who Goes In | Extra Fields |
 |----------|-------------|-------------|
-| **Creator Intelligence** | Creators Drey follows for inspiration/learning | Course extractions, teaching style |
+| **Creator Intelligence** | Creators the user follows for inspiration/learning | Course extractions, teaching style |
 | **Client Intelligence** | Viral Editz clients we work with | Raw files access, our edits, wins tracking |
 
 Same extraction pipeline. Clients get additional tracking for our own work.
@@ -150,9 +150,9 @@ Performance Tier:
 
 #### 3. Hook Swipe File (DEFERRED — Not a separate DB yet)
 
-Per Dave Gate: Hooks are already captured as properties in Video Deconstruction DB (Hook Text, Hook Type fields). Only promote to a standalone database if Drey finds himself querying hooks independently and the embedded fields aren't sufficient. Until then, filter Video Deconstruction DB by Hook Type to get the same result without extra architecture overhead.
+Per Dave Gate: Hooks are already captured as properties in Video Deconstruction DB (Hook Text, Hook Type fields). Only promote to a standalone database if the user finds himself querying hooks independently and the embedded fields aren't sufficient. Until then, filter Video Deconstruction DB by Hook Type to get the same result without extra architecture overhead.
 
-**Promotion Trigger:** If Drey asks "give me all question hooks across all creators" more than 3 times, build the dedicated Hook Swipe File DB at that point.
+**Promotion Trigger:** If the user asks "give me all question hooks across all creators" more than 3 times, build the dedicated Hook Swipe File DB at that point.
 
 ---
 
