@@ -1,0 +1,4 @@
+interface:
+  display_name: "Strict Carousel Template"
+  short_description: "Turn transcripts into strict IG carousel slide templates"
+  default_prompt: "Use $strict-carousel-template to turn this transcript into a strict 1080x1350 carousel with digits for all numbers."

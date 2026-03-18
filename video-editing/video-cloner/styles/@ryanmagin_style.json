@@ -1,0 +1,78 @@
+{
+  "name": "Ryan Magin — Viral Editz CEO",
+  "source_url": "https://www.instagram.com/reel/DJ26gjxRtRs/",
+  "creator": "@ryanmagin",
+  "platform": "instagram",
+  "date_analyzed": "2026-02-02",
+  "resolution_analyzed": "720x1280",
+
+  "subtitle_style": {
+    "type": "word-highlight-dual-color",
+    "font_name": "Montserrat-Black",
+    "font_size_1080": 62,
+    "case": "upper",
+    "no_punctuation": true,
+
+    "normal_color": [255, 255, 255],
+    "highlight_colors": [
+      [255, 230, 0],
+      [0, 230, 0]
+    ],
+    "highlight_alternation": "per_window",
+
+    "stroke_enabled": true,
+    "stroke_color": [0, 0, 0],
+    "stroke_width_1080": 5,
+
+    "shadow_enabled": true,
+    "shadow_color": [0, 0, 0, 180],
+    "shadow_blur": 4,
+    "shadow_offset": [3, 3],
+
+    "bg_enabled": false,
+
+    "position_y_pct": 0.48,
+    "max_words_per_line": 3,
+    "max_lines": 2,
+
+    "italic": true
+  },
+
+  "overlays": {
+    "style": "product-screenshot",
+    "position": "lower-half",
+    "width_pct": 0.75,
+    "corner_radius": 12,
+    "drop_shadow": false,
+    "red_arrow_indicator": true,
+    "appears_on_mention": true
+  },
+
+  "zoom_pattern": {
+    "type": "alternating",
+    "zoomed_out": "1.0x",
+    "zoomed_in": "1.3x",
+    "interval_seconds": 3,
+    "on_emphasis": true
+  },
+
+  "pacing": {
+    "average_cut_interval": 2.5,
+    "style": "fast-hard-cuts"
+  },
+
+  "color_grade": {
+    "temperature": "neutral-cool",
+    "contrast": "high",
+    "saturation": "normal",
+    "vignette": "slight"
+  },
+
+  "set_elements": {
+    "led_shoe_lights": true,
+    "acoustic_panels": true,
+    "warm_studio_lighting": true,
+    "sticker_walls": true,
+    "notes": "LED lights under sneakers change color throughout — part of set design"
+  }
+}

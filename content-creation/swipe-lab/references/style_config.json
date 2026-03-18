@@ -1,0 +1,213 @@
+{
+  "source": "@greatfrontend",
+  "scraped_at": "2026-03-15",
+  "style_name": "GreatFrontend Tech Carousel",
+  "description": "Educational frontend dev carousels. Two alternating visual styles — gradient motivational and dark technical. High engagement pattern: hook with relatable dev pain point, teach with visuals, close with CTA.",
+
+  "styles": {
+    "style_a": {
+      "name": "Gradient Motivational",
+      "usage": "Identity/personality slides, dev culture, 'be the X not the Y' format",
+      "background": "linear-gradient(135deg, #6C63FF → #00C9FF) — purple to blue gradient",
+      "text_color": "#FFFFFF",
+      "font_style": "Bold sans-serif, large (28-36pt feel), centered",
+      "text_per_slide": "1-2 sentences max, 8-15 words",
+      "layout": "centered text block with slight glass/frosted overlay card",
+      "decorative_elements": ["small cartoon/meme character illustrations", "subtle glow effects", "rounded corners on text card"],
+      "logo_placement": "bottom-left, small green GreatFrontend icon",
+      "slide_flow": [
+        "Slide 1: Hook question — 'Are you the dev they actually commit to... or just another branch they delete?'",
+        "Slides 2-5: One 'Be the X, not the Y' statement per slide with matching illustration",
+        "Slide 6: Bigger motivational statement",
+        "Final slide: CTA — 'Want to become the dev no one can ignore? Visit GreatFrontEnd today'"
+      ],
+      "copy_formula": "Be the [positive dev thing], not the [negative dev thing they [verb]]",
+      "examples": [
+        "Be someone's package.json, not their node_modules — don't be replaceable when it's time to",
+        "Be the React component everyone wants to render, not the console.log they ignore",
+        "Be the commit that matters, not the merge conflict they ignore at 2 AM",
+        "Be the clean CSS, not the div with a hundred inline styles",
+        "Be the API they call, not the error 404 they scroll past"
+      ]
+    },
+
+    "style_b": {
+      "name": "Dark Technical Deep-Dive",
+      "usage": "Framework comparisons, system design, code walkthroughs, interview prep",
+      "background": "#0D0D0D to #1A1A2E — near-black with subtle dark gradient",
+      "text_color": "#FFFFFF for headers, #B0B0B0 for body",
+      "accent_color": "#FF3B3B (red) for highlights and icons",
+      "font_style": "Bold sans-serif headers (24-32pt), regular body (14-16pt)",
+      "text_per_slide": "Header + 3-5 bullet points OR header + diagram",
+      "layout": "top-aligned header, content below with icons/illustrations",
+      "decorative_elements": ["colored icon badges (red, green, blue circles)", "tech logo illustrations", "code snippet blocks with syntax highlighting", "comparison tables"],
+      "logo_placement": "top-left, small @greatfrontend avatar + handle",
+      "slide_flow": [
+        "Slide 1: Bold title + hook question — 'Angular vs React' with tech logos",
+        "Slides 2-N: One concept per slide with header + bullets + visual",
+        "Code slides: dark code block with syntax highlighting",
+        "Final slide: Summary or CTA to GreatFrontEnd platform"
+      ],
+      "copy_formula": "[Topic] — [Subtitle explaining the angle]\nBullet points with emoji indicators"
+    },
+
+    "style_e": {
+      "name": "Black Card / Cards Against Humanity",
+      "usage": "Drey's raw voice. Hot takes, controversial opinions, punchy statements. One thought per slide. No decoration — the words ARE the design.",
+      "background": "#000000 — pure black",
+      "text_color": "#FFFFFF — pure white, centered",
+      "accent_color": "#FFD700 (gold) for key words/numbers only — used sparingly",
+      "font_style": "Inter Black, 48-96px depending on slide. Centered. No serif. No handwriting. Clean and heavy.",
+      "text_per_slide": "1-2 sentences MAX. One idea per slide. If you can't say it in 15 words, it's two slides.",
+      "layout": "Dead center. Text only. No images, no icons, no decoration. The emptiness IS the design — it forces the reader to sit with the words.",
+      "decorative_elements": ["NONE — that's the point"],
+      "logo_placement": "bottom-left, very dim (@itisdrey at 20% opacity)",
+      "slide_flow": [
+        "Slide 1: Hook — provocative opening. 'Bro nobody is talking about this.'",
+        "Slides 2-5: One fact/take per slide. Build tension. Each slide makes them need the next.",
+        "Slide 6: Drey's personal take — this is where the personality hits hardest",
+        "Slide 7: CTA — gold @itisdrey, 'save this / send it to someone'"
+      ],
+      "copy_formula": "[Short punchy statement.]\n[Dim subtext that adds context or punchline.]",
+      "why_it_works": "Contrast. In a sea of colorful, busy carousels — pure black with white text STOPS the scroll because it's different. The emptiness creates gravity. People read every word because there's nothing else to look at.",
+      "swipe_teasers": ["swipe →", "it gets worse →", "here's why →", "my take →", "the fix →"]
+    },
+
+    "style_f": {
+      "name": "Apple Keynote",
+      "usage": "Premium presentations. Big reveals, dramatic stats, product-launch energy. When the content deserves the Steve Jobs treatment.",
+      "background": "radial-gradient(ellipse at 50% 40%, #1a1a2e 0%, #000 70%) — deep black with subtle blue-ish center glow",
+      "text_color": "#FFFFFF for headers, rgba(255,255,255,0.6) for body",
+      "accent_colors": {
+        "blue": "#2997FF (Apple blue — links, follow CTA)",
+        "gold": "#FFD700 (key stats, positive outcomes)",
+        "red": "#FF453A (Apple red — warnings, negative stats)",
+        "green": "#30D158 (Apple green — success, fixes)"
+      },
+      "font_style": "Inter Black for hero numbers (96-120px), Inter Bold for titles (52-58px), Inter Light for body (24px). Letter-spacing: -2px on heroes, -1px on titles.",
+      "text_per_slide": "Hero slides: ONE number or ONE sentence. Feature slides: 3 items max with icons.",
+      "layout": "Centered vertically. Generous whitespace. Thin 60px divider lines between sections. Everything breathes.",
+      "decorative_elements": [
+        "Subtle text-shadow glow behind hero text (rgba blue/gold at 0.3 opacity, 80px blur)",
+        "Thin horizontal divider lines (60px wide, 2px, 20% white opacity)",
+        "Comparison cards with subtle borders (rgba white 0.1)",
+        "Feature list with emoji icons left-aligned"
+      ],
+      "logo_placement": "bottom-left, very dim. Slide counter bottom-right in uppercase tracking ('01 / 07')",
+      "slide_flow": [
+        "Slide 1: Dramatic setup — 'What if we told you...' then the big reveal",
+        "Slide 2: THE BIG NUMBER — 120px font, glow effect. One stat that shocks.",
+        "Slide 3: Feature list — 3 findings with emoji icons, clean layout",
+        "Slide 4: Comparison cards — side by side, subtle borders, contrasting colors",
+        "Slide 5: The solution — another big number or single sentence",
+        "Slide 6: Personal take — Drey's voice, but elevated. Still him, just... premium.",
+        "Slide 7: CTA — 'Follow @itisdrey' in Apple blue"
+      ],
+      "copy_formula": "[Small setup line in dim text]\n[MASSIVE reveal in white/colored]\n[divider]\n[Context in body text]",
+      "why_it_works": "The Steve Jobs effect. Massive typography + empty space = every word feels important. The glow effects make it feel premium without being busy. People associate this style with authority and expertise.",
+      "difference_from_black_card": "Black Card is RAW — no polish, just words. Keynote is CINEMATIC — same dark background but with glow effects, comparison cards, feature lists, and dramatic reveals. Black Card is a tweet. Keynote is a presentation."
+    },
+
+    "style_d": {
+      "name": "Sketch / Whiteboard",
+      "usage": "Drey's FAVORITE. Explainers, 'let me break this down' posts, how things work under the hood, building in public",
+      "background": "#FFF9F0 — warm off-white, like notebook paper. Optional: faint grid lines or dot grid",
+      "text_color": "#2D2D2D — dark charcoal, like marker on paper",
+      "accent_color": "#FF6B35 (orange) for highlights, #4ECDC4 (teal) for secondary, #FF3B3B (red) for X marks / warnings",
+      "font_style": "Hand-drawn feel — Caveat, Virgil, or Comic Neue. Headers large and slightly tilted. Body clean but informal",
+      "text_per_slide": "Header + hand-drawn diagram or 2-3 bullet points with doodle arrows",
+      "layout": "Loose, organic. Not grid-locked. Elements slightly off-center like someone drew it on a whiteboard mid-conversation",
+      "decorative_elements": [
+        "Hand-drawn arrows (not straight — slightly curved)",
+        "Circle highlights around key words",
+        "Underlines that look hand-drawn (wavy, not straight)",
+        "Simple stick-figure or box diagrams",
+        "Checkmarks and X marks hand-drawn",
+        "Doodle borders (not clean rectangles)",
+        "Post-it note style callouts"
+      ],
+      "logo_placement": "bottom-right, @itisdrey in handwritten font",
+      "slide_flow": [
+        "Slide 1: Hook — hand-drawn title with a question or bold statement. Feels like someone just grabbed a marker",
+        "Slides 2-5: One concept per slide with hand-drawn diagram + short explanation",
+        "Code slides: code in a 'notepad' style box with hand-drawn border",
+        "Final slide: 'Follow @itisdrey for more' in casual handwriting style"
+      ],
+      "copy_formula": "So basically... [simple explanation]\n[hand-drawn diagram showing the concept]\nThe thing nobody tells you: [insight]",
+      "why_it_works": "Feels authentic and personal. Like Drey literally whiteboarded this for you. Low production value = high trust. People save sketch carousels because they feel like notes from a smart friend.",
+      "examples": [
+        "So basically, React re-renders work like this... [arrow diagram]",
+        "Nobody explains prop drilling simply. Let me try. [stick figure passing boxes]",
+        "Here's what ACTUALLY happens when you type a URL... [hand-drawn flow]"
+      ]
+    },
+
+    "style_c": {
+      "name": "White Technical/Interview",
+      "usage": "Interview challenges, system design breakdowns, performance tips",
+      "background": "#FFFFFF — clean white",
+      "text_color": "#1A1A1A for headers, #333333 for body",
+      "accent_color": "#2563EB (blue) for links/highlights, #FF3B3B (red) for emphasis",
+      "font_style": "Bold serif or sans-serif headers, clean body text",
+      "text_per_slide": "Header + diagram or code block",
+      "layout": "header top, large visual/diagram center, caption bottom",
+      "decorative_elements": ["blue dot pagination indicators at top", "large quotation marks for interview questions", "architecture diagrams", "browser mockups"],
+      "slide_flow": [
+        "Slide 1: Interview question in big quotes — '\"Convert Virtual DOM into real HTML DOM?\"'",
+        "Slide 2: 'The Core Concept' — explain the fundamental idea",
+        "Slides 3-5: Step-by-step breakdown with diagrams",
+        "Slide 6: Code implementation",
+        "Final: 'Try it yourself' CTA"
+      ]
+    }
+  },
+
+  "universal_patterns": {
+    "avg_slides": 6.7,
+    "slide_range": "5-11 slides",
+    "aspect_ratio": "1:1 (square, 1080x1080)",
+    "pagination_dots": "colored dots at top of each slide showing progress (blue=current, gray=remaining)",
+    "hook_patterns": [
+      "Relatable dev pain point as question",
+      "Bold controversial statement",
+      "Interview challenge quote",
+      "'Most devs do X. Here's why Y is better.'",
+      "Framework comparison (X vs Y)"
+    ],
+    "cta_patterns": [
+      "Visit GreatFrontEnd today",
+      "Start your journey with comprehensive coding prep",
+      "Follow for more frontend tips",
+      "Save this for your next interview"
+    ],
+    "engagement_drivers": [
+      "Dev humor and memes mixed with real knowledge",
+      "Each slide is self-contained (works even if they stop scrolling)",
+      "Code snippets are real and runnable",
+      "Relatable workplace scenarios"
+    ],
+    "content_categories": [
+      "React deep-dives",
+      "JavaScript fundamentals",
+      "CSS techniques",
+      "System design",
+      "Interview preparation",
+      "Framework comparisons",
+      "Dev culture / motivation",
+      "Performance optimization",
+      "Tooling updates"
+    ]
+  },
+
+  "carousel_maker_config": {
+    "note": "Use these settings when generating carousels in the carousel-maker skill",
+    "default_style": "style_b",
+    "slide_count": 7,
+    "words_per_slide": "15-25 for style_a, 30-60 for style_b, 25-40 for style_c",
+    "font_family": "Inter, SF Pro Display, or similar clean sans-serif",
+    "image_gen_prompt_prefix": "Minimalist tech infographic slide, clean modern design, 1080x1080, ",
+    "style_a_prompt": "purple-blue gradient background, frosted glass card, bold white centered text, small cartoon developer illustration, modern tech aesthetic",
+    "style_b_prompt": "dark near-black background (#0D0D0D), bold white header text, red accent highlights, tech icons, code snippet with syntax highlighting, modern developer education style",
+    "style_c_prompt": "clean white background, bold dark text, blue accent color, architecture diagram, browser mockup, interview prep style, pagination dots at top"
+  }
+}

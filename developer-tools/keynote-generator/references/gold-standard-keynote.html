@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clone Architecture — Keynote</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --black: #000000;
+    --white: #ffffff;
+    --gray: #86868b;
+    --blue: #2997ff;
+    --green: #30d158;
+    --purple: #bf5af2;
+    --orange: #ff9f0a;
+    --red: #ff453a;
+  }
+
+  body {
+    font-family: 'Inter', -apple-system, 'Helvetica Neue', sans-serif;
+    background: var(--black);
+    color: var(--white);
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ─── FULL SCREEN SECTIONS ─── */
+  .slide {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 40px;
+    position: relative;
+    text-align: center;
+  }
+
+  /* ─── TYPOGRAPHY ─── */
+  .hero-text {
+    font-size: clamp(48px, 8vw, 96px);
+    font-weight: 800;
+    letter-spacing: -3px;
+    line-height: 1.05;
+    max-width: 900px;
+  }
+  .sub-hero {
+    font-size: clamp(20px, 3vw, 32px);
+    font-weight: 400;
+    color: var(--gray);
+    margin-top: 20px;
+    max-width: 700px;
+    line-height: 1.4;
+  }
+  .accent-blue { color: var(--blue); }
+  .accent-green { color: var(--green); }
+  .accent-purple { color: var(--purple); }
+  .accent-orange { color: var(--orange); }
+  .accent-red { color: var(--red); }
+  .accent-gradient {
+    background: linear-gradient(135deg, var(--blue), var(--purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .section-label {
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: var(--gray);
+    margin-bottom: 24px;
+  }
+
+  .quote {
+    font-size: clamp(24px, 4vw, 42px);
+    font-weight: 300;
+    font-style: italic;
+    color: var(--gray);
+    max-width: 800px;
+    line-height: 1.4;
+    margin-top: 40px;
+  }
+  .quote-author {
+    font-size: 16px;
+    font-style: normal;
+    color: #555;
+    margin-top: 16px;
+  }
+
+  /* ─── VERSUS ─── */
+  .vs-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 60px;
+    margin-top: 60px;
+    flex-wrap: wrap;
+    max-width: 1000px;
+  }
+  .vs-side {
+    flex: 1;
+    min-width: 300px;
+    text-align: left;
+    padding: 40px;
+    border-radius: 24px;
+  }
+  .vs-side.old {
+    background: #1a0a0a;
+    border: 1px solid #331a1a;
+  }
+  .vs-side.new {
+    background: #0a1a0a;
+    border: 1px solid #1a331a;
+  }
+  .vs-side h3 {
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 24px;
+  }
+  .vs-side.old h3 { color: var(--red); }
+  .vs-side.new h3 { color: var(--green); }
+  .vs-side ul {
+    list-style: none;
+    padding: 0;
+  }
+  .vs-side li {
+    font-size: 18px;
+    padding: 10px 0;
+    color: #999;
+    border-bottom: 1px solid #1a1a1a;
+    line-height: 1.5;
+  }
+  .vs-side li:last-child { border-bottom: none; }
+
+  /* ─── THREE STEPS ─── */
+  .steps-row {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 60px;
+    flex-wrap: wrap;
+    max-width: 1100px;
+  }
+  .step-card {
+    flex: 1;
+    min-width: 280px;
+    max-width: 340px;
+    text-align: center;
+    padding: 40px 30px;
+  }
+  .step-num {
+    font-size: 72px;
+    font-weight: 900;
+    line-height: 1;
+    margin-bottom: 16px;
+    opacity: 0.15;
+  }
+  .step-card h3 {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 8px;
+  }
+  .step-card p {
+    font-size: 16px;
+    color: var(--gray);
+    line-height: 1.6;
+  }
+
+  /* ─── THE DEMO (brain.md) ─── */
+  .demo-container {
+    max-width: 700px;
+    width: 100%;
+    margin-top: 50px;
+  }
+  .demo-terminal {
+    background: #111;
+    border: 1px solid #222;
+    border-radius: 16px;
+    overflow: hidden;
+    text-align: left;
+  }
+  .demo-bar {
+    background: #1a1a1a;
+    padding: 12px 16px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+  .demo-dot {
+    width: 12px; height: 12px; border-radius: 50%;
+  }
+  .demo-dot.r { background: #ff5f57; }
+  .demo-dot.y { background: #febc2e; }
+  .demo-dot.g { background: #28c840; }
+  .demo-bar span {
+    font-size: 12px; color: #555; margin-left: 8px;
+    font-family: 'SF Mono', monospace;
+  }
+  .demo-body {
+    padding: 24px;
+    font-family: 'SF Mono', 'Fira Code', monospace;
+    font-size: 14px;
+    line-height: 1.8;
+  }
+  .demo-prompt { color: var(--green); }
+  .demo-response { color: #ccc; }
+  .demo-quote { color: var(--blue); font-style: italic; }
+  .demo-dim { color: #555; }
+
+  /* ─── STATS ROW ─── */
+  .stats-row {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin-top: 60px;
+    flex-wrap: wrap;
+  }
+  .stat-item { text-align: center; }
+  .stat-item .stat-num {
+    font-size: clamp(48px, 7vw, 80px);
+    font-weight: 900;
+    letter-spacing: -2px;
+  }
+  .stat-item .stat-label {
+    font-size: 14px;
+    color: var(--gray);
+    margin-top: 4px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  /* ─── LAYERS (simple) ─── */
+  .layer-stack {
+    max-width: 600px;
+    width: 100%;
+    margin-top: 50px;
+  }
+  .layer-row {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 24px 0;
+    border-bottom: 1px solid #1a1a1a;
+  }
+  .layer-row:last-child { border-bottom: none; }
+  .layer-emoji { font-size: 36px; flex-shrink: 0; width: 50px; text-align: center; }
+  .layer-info h4 { font-size: 20px; font-weight: 700; color: var(--white); }
+  .layer-info p { font-size: 15px; color: var(--gray); margin-top: 2px; }
+
+  /* ─── ONE MORE THING ─── */
+  .omt-reveal {
+    font-size: clamp(32px, 5vw, 56px);
+    font-weight: 700;
+    max-width: 800px;
+    line-height: 1.3;
+    margin-top: 40px;
+  }
+
+  /* ─── NAV DOTS ─── */
+  .nav-dots {
+    position: fixed;
+    right: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    z-index: 100;
+  }
+  .nav-dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: #333;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  .nav-dot.active { background: var(--white); transform: scale(1.4); }
+
+  /* ─── DIVIDER ─── */
+  .divider {
+    width: 40px; height: 1px; background: #333; margin: 0 auto;
+  }
+
+  /* ─── ANIMATIONS ─── */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<div class="nav-dots" id="navDots"></div>
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- SLIDE 1: THE PROBLEM                               -->
+<!-- ═══════════════════════════════════════════════════ -->
+<div class="slide" data-label="Problem">
+  <div class="fade-in">
+    <div class="hero-text">
+      You are the<br><span class="accent-red">bottleneck.</span>
+    </div>
+    <div class="sub-hero">
+      Every creator, every entrepreneur, every expert —<br>
+      your biggest limitation is that there's only one of you.
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- SLIDE 2: THE OLD WAY vs THE NEW WAY                -->
+<!-- ═══════════════════════════════════════════════════ -->
+<div class="slide" data-label="Old vs New">
+  <div class="fade-in">
+    <div class="hero-text" style="font-size: clamp(36px, 5vw, 64px);">
+      There are two ways to<br>solve this.
+    </div>
+    <div class="vs-container">
+      <div class="vs-side old">
+        <h3>The old way</h3>
+        <ul>
+          <li>Hire a team of 10 people</li>
+          <li>Pay $15K-$30K/month in salaries</li>
+          <li>Spend 6 months training them</li>
+          <li>They still don't sound like you</li>
+          <li>They leave. You start over.</li>
+        </ul>
+      </div>
+      <div class="vs-side new">
+        <h3>The new way</h3>
+        <ul>
+          <li>Go to sleep</li>
+          <li>Wake up</li>
+          <li>Your clone is ready</li>
+          <li>It thinks like you</li>
+          <li>It never leaves.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- SLIDE 3: THE STATEMENT                             -->
+<!-- ═══════════════════════════════════════════════════ -->
+<div class="slide" data-label="Vision">
+  <div class="fade-in">
+    <div class="section-label">Introducing</div>
+    <div class="hero-text">
+      <span class="accent-gradient">Clone<br>Architecture.</span>
+    </div>
+    <div class="sub-hero">
+      The first system that turns any person into a<br>
+      fully queryable AI clone. Overnight. For $200 a month.
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- SLIDE 4: THREE STEPS                               -->
+<!-- ═══════════════════════════════════════════════════ -->
+<div class="slide" data-label="How It Works">
+  <div class="fade-in">
+    <div class="section-label">How it works</div>
+    <div class="hero-text" style="font-size: clamp(36px, 5vw, 64px);">
+      Three steps.<br>That's it.
+    </div>
+    <div class="steps-row">
+      <div class="step-card">
+        <div class="step-num accent-blue">1</div>
+        <h3>Download</h3>
+        <p>Point it at someone's YouTube. The machine downloads their top 50 videos and transcribes every word.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num accent-purple">2</div>
+        <h3>Extract</h3>
+        <p>Six AI prompts pull out WHAT they teach, HOW they teach it, and WHY they are who they are.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num accent-green">3</div>
+        <h3>Deploy</h3>
+        <p>A complete AI clone — their brain, their voice, their frameworks — deployed and ready to talk.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- SLIDE 5: THE BRAIN (demo)                          -->
+<!-- ═══════════════════════════════════════════════════ -->
+<div class="slide" data-label="Demo">
+  <div class="fade-in">
+    <div class="section-label">The key innovation</div>
+    <div class="hero-text" style="font-size: clamp(32px, 5vw, 56px);">
+      brain.md
+    </div>
+    <div class="sub-hero">
+      500,000 words of raw transcripts. Compressed into 5,000.<br>
+      Organized by topic. Queryable. Instant.
+    </div>
+    <div class="demo-container">
+      <div class="demo-terminal">
+        <div class="demo-bar">
+          <div class="demo-dot r"></div>
+          <div class="demo-dot y"></div>
+          <div class="demo-dot g"></div>
+          <span>Claude Code</span>
+        </div>
+        <div class="demo-body">
+          <span class="demo-prompt">luis →</span> What does Ryan think about virality?<br><br>
+          <span class="demo-dim">Reading references/ryans-brain.md → On Virality & The Algorithm...</span><br><br>
+          <span class="demo-response">Ryan treats virality as engineering, not luck. 4 years of data<br>across 24+ clients. His exact words:</span><br><br>
+          <span class="demo-quote">"The algorithm doesn't reward consistency.<br>It rewards stopping power."</span><br><br>
+          <span class="demo-response">He proved this across his client base — inconsistent posters<br>with strong hooks outperform daily posters with weak ones.</span><br><br>
+          <span class="demo-quote">"The platform doesn't care when you post.<br>It cares if people give a fuck about what you're saying."</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- SLIDE 6: FOUR LAYERS                               -->
+<!-- ═══════════════════════════════════════════════════ -->
+<div class="slide" data-label="Layers">
+  <div class="fade-in">
+    <div class="section-label">Anatomy of a clone</div>
+    <div class="hero-text" style="font-size: clamp(32px, 5vw, 56px);">
+      Four layers.<br>One person.
+    </div>
+    <div class="layer-stack">
+      <div class="layer-row">
+        <div class="layer-emoji">🧠</div>
+        <div class="layer-info">
+          <h4>Brain</h4>
+          <p>What they think. Their knowledge, organized by topic. Ask anything.</p>
+        </div>
+      </div>
+      <div class="layer-row">
+        <div class="layer-emoji">💪</div>
+        <div class="layer-info">
+          <h4>Muscle</h4>
+          <p>What they do. Their methods, SOPs, frameworks. Runs without them.</p>
+        </div>
+      </div>
+      <div class="layer-row">
+        <div class="layer-emoji">👤</div>
+        <div class="layer-info">
+          <h4>Body</h4>
+          <p>How they look and sound. Voice clone. Face. Visual style.</p>
+        </div>
+      </div>
+      <div class="layer-row">
+        <div class="layer-emoji">🔗</div>
+        <div class="layer-info">
+          <h4>Nervous System</h4>
+          <p>What's working. Performance data feeds back into the brain. It learns.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- SLIDE 7: WHERE YOUR DATABASE CONNECTS              -->
+<!-- ═══════════════════════════════════════════════════ -->
+<div class="slide" data-label="Database">
+  <div class="fade-in">
+    <div class="section-label">Your content library</div>
+    <div class="hero-text" style="font-size: clamp(28px, 4vw, 48px);">
+      Every video you've ever made.<br>
+      <span class="accent-blue">Connected. Searchable. Alive.</span>
+    </div>
+    <div class="steps-row" style="margin-top: 50px;">
+      <div class="step-card">
+        <div style="font-size: 48px; margin-bottom: 16px;">📦</div>
+        <h3 style="color: var(--blue);">Notion</h3>
+        <p>The index. Every video title, date, views, link. "Show me everything over 1M views." Instant.</p>
+      </div>
+      <div class="step-card">
+        <div style="font-size: 48px; margin-bottom: 16px;">📓</div>
+        <h3 style="color: var(--orange);">NotebookLM</h3>
+        <p>The search. Upload every transcript. "Find every time they talked about pricing." Deep search across everything.</p>
+      </div>
+      <div class="step-card">
+        <div style="font-size: 48px; margin-bottom: 16px;">🧠</div>
+        <h3 style="color: var(--green);">brain.md</h3>
+        <p>The clone. 5K words from 500K. Organized by topic. "What would they say?" Instant answer. In their voice.</p>
+      </div>
+    </div>
+    <div class="quote" style="font-size: clamp(18px, 2.5vw, 28px); margin-top: 50px;">
+      Notion tells you WHAT exists.<br>
+      NotebookLM lets you SEARCH everything.<br>
+      brain.md lets you TALK to the person.
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- SLIDE 8: PROOF — RYAN MAGIN                        -->
+<!-- ═══════════════════════════════════════════════════ -->
+<div class="slide" data-label="Proof">
+  <div class="fade-in">
+    <div class="section-label">Built and running</div>
+    <div class="hero-text" style="font-size: clamp(32px, 5vw, 56px);">
+      Ryan Magin.
+    </div>
+    <div class="sub-hero">
+      The first complete clone. This is what it looks like.
+    </div>
+    <div class="stats-row">
+      <div class="stat-item"><div class="stat-num accent-blue">20</div><div class="stat-label">Brain Files</div></div>
+      <div class="stat-item"><div class="stat-num accent-purple">3</div><div class="stat-label">Products</div></div>
+      <div class="stat-item"><div class="stat-num accent-green">117</div><div class="stat-label">Podcasts</div></div>
+      <div class="stat-item"><div class="stat-num accent-orange">130M+</div><div class="stat-label">Views</div></div>
+    </div>
+    <div class="quote">
+      "What does Ryan think about selling?"<br>
+      "How would Ryan direct this shoot?"<br>
+      "Write this caption in Ryan's voice."<br><br>
+      <span style="color: #fff; font-style: normal; font-weight: 600; font-size: 0.8em;">All answered. Instantly. From his actual words.</span>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- SLIDE 9: THE NUMBERS                               -->
+<!-- ═══════════════════════════════════════════════════ -->
+<div class="slide" data-label="Scale">
+  <div class="fade-in">
+    <div class="stats-row">
+      <div class="stat-item"><div class="stat-num" style="color: #fff;">185+</div><div class="stat-label">Skills Built</div></div>
+      <div class="stat-item"><div class="stat-num" style="color: #fff;">7,280</div><div class="stat-label">Videos Tracked</div></div>
+      <div class="stat-item"><div class="stat-num accent-green">$200</div><div class="stat-label">Per Month</div></div>
+    </div>
+    <div class="sub-hero" style="margin-top: 40px;">
+      No API costs. No vector database. No engineering team.<br>
+      One person. One subscription. One script.
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- SLIDE 10: THE OVERNIGHT                            -->
+<!-- ═══════════════════════════════════════════════════ -->
+<div class="slide" data-label="Magic">
+  <div class="fade-in">
+    <div class="hero-text" style="font-size: clamp(28px, 4vw, 48px);">
+      You type a name.<br>
+      You go to sleep.<br>
+      <span class="accent-green">You wake up with a clone.</span>
+    </div>
+    <div class="sub-hero">
+      767 lines of Python. Runs at 2:00 AM.<br>
+      Downloads. Transcribes. Extracts. Deploys.<br>
+      By morning, your AI advisor is ready to talk.
+    </div>
+    <div class="quote">
+      "clone 'Naval Ravikant' --youtube '@naval'"
+      <div class="quote-author">That's the whole command.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- SLIDE 11: ONE MORE THING                           -->
+<!-- ═══════════════════════════════════════════════════ -->
+<div class="slide" data-label="One More Thing">
+  <div class="fade-in">
+    <div class="section-label" style="color: var(--gray);">One more thing.</div>
+    <div class="omt-reveal">
+      The clone doesn't just answer questions.<br><br>
+      It <span class="accent-blue">watches</span> what goes viral.<br>
+      It <span class="accent-purple">learns</span> what works.<br>
+      It <span class="accent-green">gets smarter</span> every day.<br><br>
+      <span style="font-size: 0.7em; color: var(--gray); font-weight: 400;">
+        The Nervous System tracks 7,280 videos across YouTube, TikTok, and Instagram.
+        Performance data feeds back into the brain. The clone evolves.
+      </span>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- SLIDE 12: THE CLOSE                                -->
+<!-- ═══════════════════════════════════════════════════ -->
+<div class="slide" data-label="Close">
+  <div class="fade-in">
+    <div class="hero-text">
+      I cloned myself<br>with AI.
+    </div>
+    <div class="sub-hero" style="margin-top: 24px;">
+      185+ systems. Zero code.<br>
+      Now I'm showing you how.
+    </div>
+    <div style="margin-top: 60px;">
+      <div style="font-size: 14px; color: #333; letter-spacing: 3px; text-transform: uppercase;">Luis Carrillo</div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // ─── Scroll-driven fade-in animations ───
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.15 });
+
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+  // ─── Nav dots ───
+  const slides = document.querySelectorAll('.slide');
+  const navContainer = document.getElementById('navDots');
+
+  slides.forEach((slide, i) => {
+    const dot = document.createElement('div');
+    dot.className = 'nav-dot';
+    dot.title = slide.dataset.label || '';
+    dot.addEventListener('click', () => {
+      slide.scrollIntoView({ behavior: 'smooth' });
+    });
+    navContainer.appendChild(dot);
+  });
+
+  const dots = document.querySelectorAll('.nav-dot');
+
+  const slideObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const idx = [...slides].indexOf(entry.target);
+        dots.forEach((d, i) => d.classList.toggle('active', i === idx));
+      }
+    });
+  }, { threshold: 0.5 });
+
+  slides.forEach(slide => slideObserver.observe(slide));
+
+  // ─── Typewriter effect for demo ───
+  const demoBody = document.querySelector('.demo-body');
+  if (demoBody) {
+    const original = demoBody.innerHTML;
+    const slideWithDemo = demoBody.closest('.slide');
+    let typed = false;
+
+    const demoObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !typed) {
+          typed = true;
+          demoBody.innerHTML = '';
+          let i = 0;
+          const temp = document.createElement('div');
+          temp.innerHTML = original;
+          const text = temp.textContent;
+
+          // Just fade in the whole thing for reliability
+          demoBody.innerHTML = original;
+          demoBody.style.opacity = '0';
+          demoBody.style.transition = 'opacity 1s ease';
+          setTimeout(() => { demoBody.style.opacity = '1'; }, 300);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    demoObserver.observe(slideWithDemo);
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap');
+*{margin:0;padding:0;box-sizing:border-box;}
+
+.slide{width:1080px;height:1350px;position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;font-family:'Inter',sans-serif;}
+
+/* Apple Keynote base — deep black with subtle gradient */
+.keynote{background:radial-gradient(ellipse at 50% 40%, #1a1a2e 0%, #000 70%);padding:80px;}
+
+/* The signature Apple glow behind key elements */
+.glow{text-shadow:0 0 80px rgba(100,140,255,0.3), 0 0 160px rgba(100,140,255,0.1);}
+.glow-gold{text-shadow:0 0 60px rgba(255,200,50,0.3), 0 0 120px rgba(255,200,50,0.1);}
+.glow-red{text-shadow:0 0 60px rgba(255,59,59,0.3), 0 0 120px rgba(255,59,59,0.1);}
+
+/* Typography — massive, premium */
+.keynote h1{color:#fff;font-weight:900;line-height:1.1;letter-spacing:-2px;}
+.keynote .hero{font-size:96px;} /* The BIG number / word */
+.keynote .title{font-size:58px;}
+.keynote .subtitle{font-size:52px;font-weight:700;}
+
+.keynote p{color:rgba(255,255,255,0.6);font-size:24px;line-height:1.6;max-width:750px;font-weight:300;}
+.keynote .bright{color:rgba(255,255,255,0.9);}
+
+/* Apple blue accent */
+.apple-blue{color:#2997FF;}
+.apple-gold{color:#FFD700;}
+.apple-green{color:#30D158;}
+.apple-red{color:#FF453A;}
+
+/* Thin divider line — Apple loves these */
+.divider{width:60px;height:2px;background:rgba(255,255,255,0.2);margin:30px auto;}
+
+/* Stat block — big number + label */
+.stat-block{margin:40px 0;}
+.stat-num{font-size:120px;font-weight:900;letter-spacing:-4px;line-height:1;}
+.stat-label{font-size:26px;color:rgba(255,255,255,0.5);margin-top:10px;font-weight:400;text-transform:uppercase;letter-spacing:3px;}
+
+/* Feature list — Apple style bullet points */
+.feature-list{text-align:left;max-width:700px;margin:30px auto;}
+.feature{display:flex;align-items:flex-start;gap:20px;margin-bottom:25px;}
+.feature-icon{font-size:32px;flex-shrink:0;margin-top:2px;}
+.feature-text h3{color:#fff;font-size:26px;font-weight:700;}
+.feature-text p{color:rgba(255,255,255,0.5);font-size:20px;margin-top:4px;font-weight:300;}
+
+/* Bottom bar — minimal, premium */
+.bottom-keynote{position:absolute;bottom:45px;left:80px;right:80px;display:flex;justify-content:space-between;align-items:center;}
+.bk-handle{color:rgba(255,255,255,0.2);font-size:18px;font-weight:700;}
+.bk-counter{color:rgba(255,255,255,0.15);font-size:14px;font-weight:600;letter-spacing:2px;text-transform:uppercase;}
+.bk-swipe{color:rgba(255,255,255,0.25);font-size:18px;font-weight:400;}
+
+/* Comparison blocks */
+.compare-row{display:flex;gap:30px;margin:25px 0;max-width:850px;}
+.compare-card{flex:1;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:16px;padding:30px;text-align:left;}
+.compare-card h3{font-size:24px;color:#fff;font-weight:700;margin-bottom:10px;}
+.compare-card p{font-size:18px;color:rgba(255,255,255,0.5);line-height:1.5;font-weight:300;}
+.compare-card .num{font-size:48px;font-weight:900;margin-bottom:5px;}
+</style></head><body>
+
+<!-- SLIDE 1: The hook — massive dramatic statement -->
+<div class="slide keynote" id="ak1">
+  <h1 class="title" style="color:rgba(255,255,255,0.5);font-weight:400;margin-bottom:20px;">What if we told you</h1>
+  <h1 class="hero glow">AI is making you <span class="apple-red">worse.</span></h1>
+  <div class="divider"></div>
+  <p>A peer-reviewed study. 800+ developers. The results will change how you use every AI tool.</p>
+  <div class="bottom-keynote">
+    <span class="bk-handle">@itisdrey</span>
+    <span class="bk-swipe">swipe →</span>
+    <span class="bk-counter">01 / 07</span>
+  </div>
+</div>
+
+<!-- SLIDE 2: The big number — Apple LOVES big numbers -->
+<div class="slide keynote" id="ak2">
+  <div class="stat-block">
+    <div class="stat-num apple-red glow-red">17%</div>
+    <div class="stat-label">lower skill scores with AI assistance</div>
+  </div>
+  <div class="divider"></div>
+  <p>Anthropic ran the largest randomized controlled trial ever conducted on AI coding tools.<br><br><span class="bright">Developers who used AI assistants scored 17% lower on independent skill mastery tests.</span></p>
+  <div class="bottom-keynote">
+    <span class="bk-handle">@itisdrey</span>
+    <span class="bk-swipe">and it gets worse →</span>
+    <span class="bk-counter">02 / 07</span>
+  </div>
+</div>
+
+<!-- SLIDE 3: Three findings — clean feature list -->
+<div class="slide keynote" id="ak3">
+  <h1 class="subtitle" style="margin-bottom:10px;">Three unexpected findings.</h1>
+  <div class="divider"></div>
+  <div class="feature-list">
+    <div class="feature">
+      <span class="feature-icon">⏱️</span>
+      <div class="feature-text">
+        <h3>AI didn't make them faster.</h3>
+        <p>25% of session time was spent reviewing and correcting AI-generated suggestions. Net productivity gain: zero.</p>
+      </div>
+    </div>
+    <div class="feature">
+      <span class="feature-icon">👴</span>
+      <div class="feature-text">
+        <h3>Seniors degraded as much as juniors.</h3>
+        <p>10 years of experience provided zero protection against skill erosion. Nobody was immune.</p>
+      </div>
+    </div>
+    <div class="feature">
+      <span class="feature-icon">🐛</span>
+      <div class="feature-text">
+        <h3>Debugging skills were hit hardest.</h3>
+        <p>The pattern-matching intuition that comes from writing and fixing your own bugs — destroyed first.</p>
+      </div>
+    </div>
+  </div>
+  <div class="bottom-keynote">
+    <span class="bk-handle">@itisdrey</span>
+    <span class="bk-swipe">here's why →</span>
+    <span class="bk-counter">03 / 07</span>
+  </div>
+</div>
+
+<!-- SLIDE 4: The two modes — comparison cards -->
+<div class="slide keynote" id="ak4">
+  <h1 class="subtitle" style="margin-bottom:5px;">Two modes. Two outcomes.</h1>
+  <div class="divider"></div>
+  <div class="compare-row">
+    <div class="compare-card" style="border-color:rgba(255,69,58,0.3);">
+      <div class="num apple-red">65%</div>
+      <h3 style="color:#FF453A;">Delegation Mode</h3>
+      <p>"Accept whatever AI gives me."<br><br>Blind copy-paste. No questioning. Skills erode silently until you can't code without the crutch.</p>
+    </div>
+    <div class="compare-card" style="border-color:rgba(255,215,0,0.3);">
+      <div class="num apple-gold">85%</div>
+      <h3 style="color:#FFD700;">Inquiry Mode</h3>
+      <p>"Why does this work? Let me understand."<br><br>Use AI as a collaborator, not a replacement. Skills stay sharp. You get faster AND smarter.</p>
+    </div>
+  </div>
+  <div class="bottom-keynote">
+    <span class="bk-handle">@itisdrey</span>
+    <span class="bk-swipe">the fix →</span>
+    <span class="bk-counter">04 / 07</span>
+  </div>
+</div>
+
+<!-- SLIDE 5: The fix — one massive insight -->
+<div class="slide keynote" id="ak5">
+  <h1 class="title" style="color:rgba(255,255,255,0.5);font-weight:400;margin-bottom:15px;">The fix takes</h1>
+  <div class="stat-block" style="margin:15px 0;">
+    <div class="stat-num apple-gold glow-gold">2 min.</div>
+  </div>
+  <div class="divider"></div>
+  <p style="font-size:28px;"><span class="bright">Every time AI gives you code, ask yourself one question:</span></p>
+  <p style="font-size:36px;color:#fff;font-weight:700;margin-top:20px;">"Why does this work?"</p>
+  <p style="margin-top:20px;">That single habit nearly doubled test scores in the study. The behavioral change was tiny. The impact was massive.</p>
+  <div class="bottom-keynote">
+    <span class="bk-handle">@itisdrey</span>
+    <span class="bk-swipe">my take →</span>
+    <span class="bk-counter">05 / 07</span>
+  </div>
+</div>
+
+<!-- SLIDE 6: Drey's take — personal, direct -->
+<div class="slide keynote" id="ak6">
+  <h1 class="subtitle glow" style="margin-bottom:30px;">Here's my take.</h1>
+  <p style="font-size:28px;color:rgba(255,255,255,0.8);max-width:780px;line-height:1.7;">
+    AI isn't making developers worse.<br>
+    <span style="color:#FF453A;font-weight:700;">Laziness is.</span><br><br>
+    A power tool in the hands of someone who understands the craft?<br>
+    <span style="color:#FFD700;font-weight:700;">Dangerous.</span><br><br>
+    A power tool in the hands of someone who just wants the answer?<br>
+    <span style="color:rgba(255,255,255,0.4);">They'll lose the craft entirely.</span>
+  </p>
+  <div class="bottom-keynote">
+    <span class="bk-handle">@itisdrey</span>
+    <span class="bk-swipe">→</span>
+    <span class="bk-counter">06 / 07</span>
+  </div>
+</div>
+
+<!-- SLIDE 7: CTA — "One more thing" energy -->
+<div class="slide keynote" id="ak7">
+  <h1 class="title glow" style="font-size:46px;">Use AI.<br>Understand what it gives you.</h1>
+  <div class="divider" style="margin:25px auto;"></div>
+  <p style="font-size:26px;color:rgba(255,255,255,0.7);">That's the difference between a <span style="color:#FFD700;font-weight:700;">developer</span><br>and a prompt jockey.</p>
+  <div style="margin-top:50px;">
+    <p style="font-size:20px;color:rgba(255,255,255,0.3);">Save this. Send it to a dev who needs to hear it.</p>
+    <p style="font-size:32px;color:#2997FF;font-weight:900;margin-top:15px;">Follow @itisdrey</p>
+  </div>
+  <div class="bottom-keynote">
+    <span class="bk-handle">@itisdrey</span>
+    <span class="bk-swipe"></span>
+    <span class="bk-counter">07 / 07</span>
+  </div>
+</div>
+
+</body></html>

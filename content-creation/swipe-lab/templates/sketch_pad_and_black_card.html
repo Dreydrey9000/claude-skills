@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Caveat:wght@400;700&family=JetBrains+Mono:wght@400;700&display=swap');
+*{margin:0;padding:0;box-sizing:border-box;}
+
+/* ══════════════════════════════════════════ */
+/* SKETCH PAD v3 — with Drey's personality   */
+/* ══════════════════════════════════════════ */
+.slide{width:1080px;height:1350px;position:relative;overflow:hidden;display:flex;flex-direction:column;}
+
+.sketch{background:#FFF9F0;background-image:radial-gradient(circle,#ddd 1px,transparent 1px);background-size:24px 24px;font-family:'Caveat',cursive;padding:55px 60px 0 60px;}
+.sticker{position:absolute;top:35px;right:40px;background:#FFD700;color:#2D2D2D;padding:10px 20px;font-size:22px;transform:rotate(3deg);border-radius:4px;box-shadow:2px 2px 0 rgba(0,0,0,0.1);font-family:'Caveat',cursive;}
+.sn{position:absolute;top:38px;left:50px;font-family:'Inter',sans-serif;font-size:16px;color:#bbb;font-weight:700;}
+h1.sk{font-size:60px;color:#2D2D2D;line-height:1.1;transform:rotate(-0.5deg);}
+h2.sk{font-size:46px;color:#2D2D2D;line-height:1.15;}
+.orange{color:#FF6B35;} .red{color:#FF3B3B;} .teal{color:#4ECDC4;}
+u{text-decoration-color:#FF6B35;text-decoration-thickness:4px;text-underline-offset:8px;}
+.sub-sk{font-size:30px;color:#666;margin-top:10px;line-height:1.4;}
+.diagram{flex:1;display:flex;align-items:center;justify-content:center;flex-direction:column;}
+.box{border:3px solid #2D2D2D;border-radius:12px;padding:14px 22px;font-size:26px;color:#2D2D2D;text-align:center;background:#fff;}
+.box.ob{background:#FFE8D6;border-color:#FF6B35;} .box.rb{background:#FFE0E0;border-color:#FF3B3B;}
+.box.tb{background:#D4F5F0;border-color:#4ECDC4;} .box.bb{background:#DBEAFE;border-color:#3B82F6;}
+.box.yb{background:#FEF3C7;border-color:#F59E0B;}
+.metaphor{background:#FFE8D6;border-left:5px solid #FF6B35;padding:15px 20px;border-radius:0 10px 10px 0;margin:15px 0;}
+.metaphor p{font-size:26px;color:#2D2D2D;line-height:1.4;}
+.metaphor .ml{font-size:18px;color:#FF6B35;font-weight:700;font-family:'Inter',sans-serif;margin-bottom:5px;text-transform:uppercase;letter-spacing:1px;}
+.bottom-bar{margin-top:auto;padding:22px 0 35px 0;display:flex;justify-content:space-between;align-items:center;border-top:2px dashed #ddd;}
+.bh{font-size:26px;color:#999;} .bc{font-family:'Inter',sans-serif;font-size:16px;color:#bbb;font-weight:700;} .bhandle{font-size:22px;color:#aaa;}
+.note-box{background:rgba(255,255,255,0.7);border:3px dashed #4ECDC4;border-radius:12px;padding:16px 20px;margin:12px 0;transform:rotate(0.3deg);}
+.note-box p{font-size:26px;color:#2D2D2D;line-height:1.4;}
+.code-sk{background:#2D2D2D;border-radius:14px;padding:20px;margin:12px 0;border:3px solid #4ECDC4;transform:rotate(-0.3deg);}
+.code-sk pre{font-family:'JetBrains Mono',monospace;font-size:19px;color:#e0e0e0;line-height:1.5;white-space:pre-wrap;}
+.two-col{display:flex;gap:20px;margin:15px 0;}
+.col{flex:1;padding:18px;border-radius:12px;}
+.col-y{border:3px solid #4ECDC4;background:rgba(78,205,196,0.08);}
+.col-n{border:3px solid #FF3B3B;background:rgba(255,59,59,0.08);}
+.col p{font-size:24px;line-height:1.5;}
+.colt{font-size:28px;font-weight:700;margin-bottom:8px;}
+
+/* ══════════════════════════════════════════ */
+/* BLACK CARD — Cards Against Humanity style */
+/* ══════════════════════════════════════════ */
+.black{background:#000;font-family:'Inter',sans-serif;padding:80px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;}
+.black h1{color:#fff;font-size:56px;font-weight:900;line-height:1.3;max-width:900px;}
+.black .accent{color:#FFD700;}
+.black .dim{color:rgba(255,255,255,0.4);font-size:24px;margin-top:20px;line-height:1.5;max-width:700px;}
+.black .bottom-black{position:absolute;bottom:45px;left:80px;right:80px;display:flex;justify-content:space-between;align-items:center;}
+.black .bb-handle{color:rgba(255,255,255,0.25);font-size:20px;font-weight:700;}
+.black .bb-counter{color:rgba(255,255,255,0.2);font-size:16px;font-weight:700;}
+.black .bb-swipe{color:rgba(255,255,255,0.3);font-size:20px;}
+</style></head><body>
+
+<!-- ════════════════════════════════════════ -->
+<!-- SKETCH PAD v3 — "React Re-Renders"     -->
+<!-- Copy rewritten in Drey's actual voice   -->
+<!-- ════════════════════════════════════════ -->
+
+<div class="slide sketch" id="sk1">
+  <div class="sticker">bro save this</div>
+  <h1 class="sk" style="margin-top:20px;">So like... why does your React app keep <u>re-rendering</u> everything?</h1>
+  <p class="sub-sk">Here's the thing. Nobody explains this simply.<br>So I drew it out for you. →</p>
+
+  <div class="diagram">
+    <div style="display:flex;align-items:center;gap:15px;margin-bottom:20px;">
+      <div class="box ob" style="font-size:28px;font-weight:700;padding:20px 30px;">YOU<br><span style="font-size:20px;">(parent component)</span></div>
+      <span style="font-size:50px;color:#FF6B35;">→</span>
+      <div style="display:flex;gap:12px;">
+        <div class="box" style="font-size:22px;">🚪 Room 1<br><span style="font-size:17px;">Header</span></div>
+        <div class="box" style="font-size:22px;">🚪 Room 2<br><span style="font-size:17px;">Content</span></div>
+        <div class="box" style="font-size:22px;">🚪 Room 3<br><span style="font-size:17px;">Footer</span></div>
+      </div>
+    </div>
+    <div class="metaphor" style="max-width:750px;">
+      <p class="ml">Think of it like this</p>
+      <p>React is basically knocking on <span class="orange">EVERY door</span> in the hallway... even if it only needs apartment 3.</p>
+      <p style="margin-top:8px;">That's why your app feels slow. It's doing a shit ton of extra work for no reason.</p>
+    </div>
+  </div>
+
+  <div class="bottom-bar">
+    <span class="bh">swipe to see why + the fix →</span>
+    <span class="bc">1 / 6</span>
+    <span class="bhandle">@itisdrey</span>
+  </div>
+</div>
+
+<div class="slide sketch" id="sk2">
+  <div class="sn">2 / 6</div>
+  <h2 class="sk" style="margin-top:20px;">Ok so 3 things make React re-render:</h2>
+  <p class="sub-sk">And #3 is the one that gets literally everyone.</p>
+
+  <div class="diagram" style="gap:15px;">
+    <div style="display:flex;align-items:center;gap:20px;">
+      <div class="box ob" style="width:280px;font-size:26px;font-weight:700;">1. State changes</div>
+      <span style="font-size:22px;color:#666;max-width:380px;">You call useState → screen re-paints. Pretty straightforward.</span>
+    </div>
+    <div style="display:flex;align-items:center;gap:20px;">
+      <div class="box bb" style="width:280px;font-size:26px;font-weight:700;">2. Props change</div>
+      <span style="font-size:22px;color:#666;max-width:380px;">Parent sends new data → child updates. Makes sense right?</span>
+    </div>
+    <div style="display:flex;align-items:center;gap:20px;">
+      <div class="box rb" style="width:280px;font-size:26px;font-weight:700;">3. Parent re-renders</div>
+      <span style="font-size:22px;color:#666;max-width:380px;"><span class="red" style="font-weight:700;">THIS ONE THO.</span> Parent changes → ALL children re-render. Even if literally nothing changed for them.</span>
+    </div>
+
+    <div class="metaphor" style="max-width:700px;margin-top:10px;">
+      <p class="ml">The analogy</p>
+      <p>One kid gets caught cheating → teacher makes the <span class="red">WHOLE CLASS</span> redo the test. Everyone suffers because of one person. That's React without optimization.</p>
+    </div>
+  </div>
+
+  <div class="bottom-bar">
+    <span class="bh">here's what that looks like →</span>
+    <span class="bc">2 / 6</span>
+    <span class="bhandle">@itisdrey</span>
+  </div>
+</div>
+
+<div class="slide sketch" id="sk3">
+  <div class="sn">3 / 6</div>
+  <h2 class="sk" style="margin-top:20px;">This is what's <span class="red">actually happening</span> in your app:</h2>
+
+  <div class="diagram">
+    <div style="text-align:center;">
+      <div class="box ob" style="display:inline-block;font-size:26px;font-weight:700;padding:16px 30px;">App <span style="font-size:18px;">(state changed!)</span></div>
+      <div style="margin:6px 0;"><span style="font-size:36px;color:#FF3B3B;">↓ ↓ ↓</span></div>
+      <div style="display:flex;justify-content:center;gap:15px;">
+        <div class="box rb" style="font-size:22px;">Header<br><span style="font-size:16px;color:#FF3B3B;">re-renders ❌</span></div>
+        <div class="box rb" style="font-size:22px;">Content<br><span style="font-size:16px;color:#FF3B3B;">re-renders ❌</span></div>
+        <div class="box rb" style="font-size:22px;">Footer<br><span style="font-size:16px;color:#FF3B3B;">re-renders ❌</span></div>
+      </div>
+      <div style="margin:6px 0;"><span style="font-size:36px;color:#FF3B3B;">↓ ↓</span></div>
+      <div style="display:flex;justify-content:center;gap:15px;">
+        <div class="box rb" style="font-size:20px;">NavBar ❌</div>
+        <div class="box rb" style="font-size:20px;">UserList ❌</div>
+        <div class="box rb" style="font-size:20px;">Copyright ❌</div>
+      </div>
+    </div>
+
+    <p style="text-align:center;font-size:32px;color:#FF3B3B;margin-top:20px;font-weight:700;">Every. Single. Component. Re-renders.</p>
+    <p style="text-align:center;font-size:26px;color:#666;margin-top:6px;">Even the ones where absolutely nothing changed. Super wasteful.</p>
+    <p style="text-align:center;font-size:28px;color:#2D2D2D;margin-top:10px;">This is the biggest performance killer and most devs don't even know it's happening.</p>
+  </div>
+
+  <div class="bottom-bar">
+    <span class="bh">ok here's the fix (it's honestly easy) →</span>
+    <span class="bc">3 / 6</span>
+    <span class="bhandle">@itisdrey</span>
+  </div>
+</div>
+
+<div class="slide sketch" id="sk4">
+  <div class="sn">4 / 6</div>
+  <h2 class="sk" style="margin-top:20px;">The fix: <span class="teal">React.memo()</span></h2>
+  <p class="sub-sk">Basically a "Do Not Disturb" sign for your components.</p>
+
+  <div class="diagram">
+    <div style="display:flex;gap:25px;">
+      <div style="flex:1;text-align:center;">
+        <p style="font-size:22px;color:#FF3B3B;font-weight:700;font-family:'Inter',sans-serif;">WITHOUT MEMO</p>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:6px;margin-top:8px;">
+          <div class="box ob" style="font-size:20px;">App changes</div>
+          <span style="color:#FF3B3B;font-size:24px;">↓</span>
+          <div class="box rb" style="font-size:18px;">Header re-renders ❌</div>
+          <div class="box rb" style="font-size:18px;">BigList re-renders ❌</div>
+          <div class="box rb" style="font-size:18px;">Footer re-renders ❌</div>
+        </div>
+        <p style="font-size:20px;color:#FF3B3B;margin-top:8px;">slow af</p>
+      </div>
+      <div style="flex:1;text-align:center;">
+        <p style="font-size:22px;color:#4ECDC4;font-weight:700;font-family:'Inter',sans-serif;">WITH MEMO ✨</p>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:6px;margin-top:8px;">
+          <div class="box ob" style="font-size:20px;">App changes</div>
+          <span style="color:#4ECDC4;font-size:24px;">↓</span>
+          <div class="box tb" style="font-size:18px;">Header SKIPPED ✅</div>
+          <div class="box rb" style="font-size:18px;">BigList updates (props changed)</div>
+          <div class="box tb" style="font-size:18px;">Footer SKIPPED ✅</div>
+        </div>
+        <p style="font-size:20px;color:#4ECDC4;margin-top:8px;">way faster</p>
+      </div>
+    </div>
+
+    <div class="code-sk" style="margin-top:20px;width:100%;">
+      <pre><span style="color:#888;">// Literally just wrap it. That's the whole thing.</span>
+const Header = React.memo(({ title }) => {
+  return &lt;h1&gt;{title}&lt;/h1&gt;
+})
+<span style="color:#888;">// Now it only re-renders when title actually changes
+// React sees the "Do Not Disturb" sign and walks past</span></pre>
+    </div>
+  </div>
+
+  <div class="bottom-bar">
+    <span class="bh">but don't go crazy with it →</span>
+    <span class="bc">4 / 6</span>
+    <span class="bhandle">@itisdrey</span>
+  </div>
+</div>
+
+<div class="slide sketch" id="sk5">
+  <div class="sn">5 / 6</div>
+  <h2 class="sk" style="margin-top:20px;">When to memo <span style="font-size:32px;color:#999;">(and when to chill)</span></h2>
+  <p class="sub-sk">Don't put a Do Not Disturb sign on every door in the hotel. Just the ones where someone's sleeping.</p>
+
+  <div class="two-col" style="margin-top:15px;flex:1;">
+    <div class="col col-y">
+      <p class="colt teal">✓ Yeah memo this</p>
+      <p>🔵 Big lists (100+ items)</p>
+      <p>🔵 Charts & data viz</p>
+      <p>🔵 Components that re-render a LOT but props barely change</p>
+      <p>🔵 You actually MEASURED it's slow</p>
+    </div>
+    <div class="col col-n">
+      <p class="colt red">✗ Nah skip it</p>
+      <p>🔴 Simple buttons / text</p>
+      <p>🔴 Stuff that changes every render anyway</p>
+      <p>🔴 Tiny cheap components</p>
+      <p>🔴 "Just in case" (this is not a thing)</p>
+    </div>
+  </div>
+
+  <div class="metaphor" style="margin-bottom:15px;">
+    <p class="ml">The reality is</p>
+    <p>Premature optimization is a waste of your time. If you can't PROVE it's slow with actual numbers, don't touch it. Measure first. Always.</p>
+  </div>
+
+  <div class="bottom-bar">
+    <span class="bh">quick recap →</span>
+    <span class="bc">5 / 6</span>
+    <span class="bhandle">@itisdrey</span>
+  </div>
+</div>
+
+<div class="slide sketch" id="sk6">
+  <div class="sn">6 / 6</div>
+  <h1 class="sk" style="margin-top:20px;font-size:50px;">Alright here's the recap:</h1>
+
+  <div class="diagram" style="align-items:flex-start;gap:14px;">
+    <div style="display:flex;align-items:center;gap:15px;">
+      <div class="box yb" style="font-size:20px;min-width:38px;font-family:'Inter',sans-serif;font-weight:900;">1</div>
+      <span style="font-size:28px;">State, props, or parent change → React re-renders</span>
+    </div>
+    <div style="display:flex;align-items:center;gap:15px;">
+      <div class="box yb" style="font-size:20px;min-width:38px;font-family:'Inter',sans-serif;font-weight:900;">2</div>
+      <span style="font-size:28px;">Parent re-render = <span class="red">ALL kids re-render too</span> (the sneaky one)</span>
+    </div>
+    <div style="display:flex;align-items:center;gap:15px;">
+      <div class="box yb" style="font-size:20px;min-width:38px;font-family:'Inter',sans-serif;font-weight:900;">3</div>
+      <span style="font-size:28px;">React.memo() = <span class="teal">"Do Not Disturb" sign</span> on the door</span>
+    </div>
+    <div style="display:flex;align-items:center;gap:15px;">
+      <div class="box yb" style="font-size:20px;min-width:38px;font-family:'Inter',sans-serif;font-weight:900;">4</div>
+      <span style="font-size:28px;">Only memo the heavy stuff. Measure first. Don't guess.</span>
+    </div>
+  </div>
+
+  <div style="text-align:center;margin-top:auto;margin-bottom:15px;">
+    <p style="font-size:34px;color:#2D2D2D;">Save this for next time your app feels slow.</p>
+    <p style="font-size:40px;color:#FF6B35;font-weight:700;margin-top:10px;">Follow @itisdrey</p>
+    <p style="font-size:24px;color:#999;margin-top:6px;">I break down dev stuff so you can actually use it. No fluff.</p>
+  </div>
+
+  <div class="bottom-bar">
+    <span class="bh"></span>
+    <span class="bc">6 / 6</span>
+    <span class="bhandle">@itisdrey</span>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════ -->
+<!-- BLACK CARD — "What Nobody Tells You     -->
+<!--              About Building With AI"    -->
+<!-- Pure black. White text. Words only.     -->
+<!-- Cards Against Humanity energy.          -->
+<!-- ════════════════════════════════════════ -->
+
+<div class="slide black" id="bc1">
+  <h1>Bro nobody is talking about this.</h1>
+  <div class="dim">Anthropic just proved that AI is making developers worse. And the fix is stupidly simple.</div>
+  <div class="bottom-black">
+    <span class="bb-handle">@itisdrey</span>
+    <span class="bb-swipe">swipe →</span>
+    <span class="bb-counter">1 / 7</span>
+  </div>
+</div>
+
+<div class="slide black" id="bc2">
+  <h1>Devs using AI scored<br><span class="accent">17% lower</span><br>on skill tests.</h1>
+  <div class="dim">Not juniors. Everyone. Seniors degraded just as much.</div>
+  <div class="bottom-black">
+    <span class="bb-handle">@itisdrey</span>
+    <span class="bb-swipe">it gets worse →</span>
+    <span class="bb-counter">2 / 7</span>
+  </div>
+</div>
+
+<div class="slide black" id="bc3">
+  <h1>And AI didn't even make them <span class="accent">faster.</span></h1>
+  <div class="dim">25% of their time was spent reviewing and fixing AI's suggestions. So... slower AND dumber. Cool.</div>
+  <div class="bottom-black">
+    <span class="bb-handle">@itisdrey</span>
+    <span class="bb-swipe">here's why →</span>
+    <span class="bb-counter">3 / 7</span>
+  </div>
+</div>
+
+<div class="slide black" id="bc4">
+  <h1>Two types of devs showed up in the data:</h1>
+  <div class="dim" style="margin-top:35px;text-align:left;max-width:750px;">
+    <p style="font-size:28px;color:rgba(255,255,255,0.9);">The ones who just <span style="color:#FF3B3B;">accepted</span> whatever AI gave them.</p>
+    <p style="font-size:22px;color:rgba(255,255,255,0.4);margin-top:5px;">Mastery dropped to 65%. They got lazy. Skills eroded.</p>
+    <p style="font-size:28px;color:rgba(255,255,255,0.9);margin-top:25px;">The ones who <span style="color:#FFD700;">questioned</span> what AI gave them.</p>
+    <p style="font-size:22px;color:rgba(255,255,255,0.4);margin-top:5px;">Mastery stayed at 85%. They used AI as a tool, not a crutch.</p>
+  </div>
+  <div class="bottom-black">
+    <span class="bb-handle">@itisdrey</span>
+    <span class="bb-swipe">the fix →</span>
+    <span class="bb-counter">4 / 7</span>
+  </div>
+</div>
+
+<div class="slide black" id="bc5">
+  <h1>The fix takes<br><span class="accent">2 minutes.</span></h1>
+  <div class="dim" style="font-size:28px;">Every time AI gives you code, spend 2-3 minutes asking yourself: "Why does this work?"<br><br>That's it. That nearly doubled their scores.</div>
+  <div class="bottom-black">
+    <span class="bb-handle">@itisdrey</span>
+    <span class="bb-swipe">my take →</span>
+    <span class="bb-counter">5 / 7</span>
+  </div>
+</div>
+
+<div class="slide black" id="bc6">
+  <h1>AI isn't making devs worse.</h1>
+  <h1 style="margin-top:15px;"><span class="accent">Laziness</span> is.</h1>
+  <div class="dim" style="margin-top:30px;">A power tool in the hands of someone who knows the craft? Dangerous.<br><br>A power tool in the hands of someone who just wants answers? They'll lose the craft entirely.</div>
+  <div class="bottom-black">
+    <span class="bb-handle">@itisdrey</span>
+    <span class="bb-swipe">→</span>
+    <span class="bb-counter">6 / 7</span>
+  </div>
+</div>
+
+<div class="slide black" id="bc7">
+  <h1>Use AI.<br>Understand what it gives you.<br><br>That's the difference between a <span class="accent">developer</span> and a prompt jockey.</h1>
+  <div class="dim" style="margin-top:30px;">Save this. Send it to a dev who needs to hear it.</div>
+  <div style="margin-top:40px;"><span style="color:#FFD700;font-size:32px;font-weight:900;">Follow @itisdrey</span></div>
+  <div class="bottom-black">
+    <span class="bb-handle">@itisdrey</span>
+    <span class="bb-swipe"></span>
+    <span class="bb-counter">7 / 7</span>
+  </div>
+</div>
+
+</body></html>
